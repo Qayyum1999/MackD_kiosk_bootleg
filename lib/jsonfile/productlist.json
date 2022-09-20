@@ -1,0 +1,70 @@
+[
+    {
+      "id": 0,
+      "name": "Diet Coke",
+      "category": "Beverages",
+      "imageUrl": "assets/images/beverages.png",
+      "price": "799"
+    },
+    {
+      "id": 1,
+      "name": "Large Fries",
+      "category": "Fries",
+      "oldPrice": "999",
+      "imageUrl": "assets/images/snacks_and_sides.png",
+      "price": "719"
+    },
+    {
+      "id": 2,
+      "name": "Cheese Burger",
+      "category": "Burgers",
+      "imageUrl": "assets/images/cheeseburger.png",
+      "price": "944"
+    },
+    {
+      "id": 3,
+      "name": "Chicken Nugget",
+      "category": "Snacks and Sides",
+      "imageUrl": "assets/images/chicken.png",
+      "price": "469"
+    },
+    {
+      "id": 4,
+      "name": "Happy Meal",
+      "category": "Snacks and Sides",
+      "imageUrl": "assets/images/happy_meal.png",
+      "price": "760"
+    },
+    {
+      "id": 5,
+      "name": "Combo Meal",
+      "category": "Promotion",
+      "imageUrl": "assets/images/combo_meal.png",
+      "oldPrice": "599",
+      "price": "449"
+    },
+    {
+      "id": 6,
+      "name": "Beef Burger",
+      "category": "Burgers",
+      "imageUrl": "assets/images/burgers_and_sandwiches.png",
+      "oldPrice": "2799",
+      "price": "1196"
+    },
+    {
+      "id": 7,
+      "name": "Bacon Ranch Salad",
+      "category": "Burgers",
+      "imageUrl": "assets/images/bacon_ranch_salad.png",
+      "oldPrice": "1049",
+      "price": "890"
+    },
+    {
+      "id": 8,
+      "name": "Double Quarter Pounder",
+      "category": "Men",
+      "imageUrl": "assets/images/double_quarter_pounder.png",
+      "oldPrice": "3699",
+      "price": "999"
+    }
+]
