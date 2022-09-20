@@ -17,20 +17,24 @@ class ResponsiveLayout extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return LayoutBuilder(
-      builder: (context, constraints) {
-        if (constraints.maxWidth < 500) {
-          return mobileBody;
-        } else if (constraints.maxWidth < 1000) {
-          return tabletBody;
-        } else if (constraints.maxWidth < 1100) {
-          return mediumtabletBody;
-        } else if (constraints.maxWidth < 1300) {
-          return largetabletBody;
-        } else {
-          return desktopBody;
-        }
-      },
+    return SafeArea(
+      top: true,
+      bottom: true,
+      child: LayoutBuilder(
+        builder: (context, constraints) {
+          if (constraints.maxWidth < 500) {
+            return mobileBody;
+          } else if (constraints.maxWidth < 1000) {
+            return tabletBody;
+          } else if (constraints.maxWidth < 1100) {
+            return mediumtabletBody;
+          } else if (constraints.maxWidth < 1300) {
+            return largetabletBody;
+          } else {
+            return desktopBody;
+          }
+        },
+      ),
     );
   }
 }

@@ -33,11 +33,7 @@ void main() {
   runApp(
     ChangeNotifierProvider(
       create: (context) => ShoppingCart(),
-      child: DevicePreview(
-        enabled: !kReleaseMode,
-        builder: (context) => // Wrap your app
-            MyApp(),
-      ),
+      child: MyApp(),
     ),
   );
 }
@@ -47,15 +43,10 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      top: true,
-      bottom: true,
-      child: Sizer(
+    return  Sizer(
         builder: (context, orientation, deviceType) {
           return MaterialApp(
               useInheritedMediaQuery: true,
-              locale: DevicePreview.locale(context),
-              builder: DevicePreview.appBuilder,
               title: "Food Ordering App",
               theme: ThemeData(
                 primarySwatch: Colors.blue,
@@ -89,7 +80,7 @@ class MyApp extends StatelessWidget {
                 '/fifth': (context) => FinalPageScreen(),
               });
         },
-      ),
-    );
+      );
+    
   }
 }
