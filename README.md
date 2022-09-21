@@ -3,6 +3,9 @@
 A new Flutter project.
 
 ## Getting Started
+![Screenshot 2022-09-20 103006](https://user-images.githubusercontent.com/90374083/191508995-a039f6f1-c55a-4f7d-a252-3ad68330d0a1.jpg)
+![Screenshot 2022-09-20 103250](https://user-images.githubusercontent.com/90374083/191509047-53f89afd-0639-4835-8f9b-75f69874dea8.jpg)
+![Screenshot 2022-09-20 103155](https://user-images.githubusercontent.com/90374083/191512390-0159cbbc-e173-4680-bf37-04cce40cf60f.jpg)
 
 For some reason, there is a bug on the build release file, so please install the debug release file on
 the android device to see it works properly.
