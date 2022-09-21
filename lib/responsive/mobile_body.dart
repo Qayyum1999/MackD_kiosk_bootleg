@@ -20,11 +20,10 @@ class _MenuScreenMobileState extends State<MenuScreenMobile> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.grey.shade50,
-      body: Column(
-        children: [
-          Expanded(
-            flex: 0,
-            child: Stack(
+      body: Expanded(
+        child: Column(
+          children: [
+            Stack(
               children: [
                 Container(
                   height: 10.h,
@@ -70,9 +69,7 @@ class _MenuScreenMobileState extends State<MenuScreenMobile> {
                 ),
               ],
             ),
-          ),
-          Expanded(
-            child: Stack(
+            Stack(
               children: [
                 Padding(
                   padding: const EdgeInsets.only(top: 18.0, right: 70),
@@ -217,171 +214,172 @@ class _MenuScreenMobileState extends State<MenuScreenMobile> {
                 ),
               ],
             ),
-          ),
-          Expanded(
-            flex: 0,
-            child: Container(
-              alignment: Alignment.centerRight,
-              // color: Color.fromARGB(255, 0, 104, 9),
-              decoration: BoxDecoration(
-                gradient: LinearGradient(
-                    colors: [
-                      Color.fromARGB(255, 5, 112, 2),
-                      Color.fromARGB(255, 8, 146, 3),
-                      Color.fromARGB(255, 11, 177, 5),
-                      Color.fromARGB(255, 11, 177, 5),
-                      Color.fromARGB(255, 11, 177, 5),
-                      Color.fromARGB(255, 8, 146, 3),
-                      Color.fromARGB(255, 5, 112, 2),
-                      //add more colors for gradient
-                    ],
-                    begin: Alignment.topLeft, //begin of the gradient color
-                    end: Alignment.bottomRight, //end of the gradient color
-                    stops: [
-                      0,
-                      0.2,
-                      0.3,
-                      0.5,
-                      0.7,
-                      0.8,
-                      1
-                    ] //stops for individual color
-                    //set the stops number equal to numbers of color
-                    ),
-              ),
-              width: double.infinity,
-              child: Padding(
-                padding: EdgeInsets.fromLTRB(3.w, 5, 3.w, 5),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Text(
-                      'My Order - ${context.watch<ShoppingCart>().newordermethod}',
-                      textAlign: TextAlign.center,
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 7.sp,
+            Expanded(
+              flex: 0,
+              child: Container(
+                alignment: Alignment.centerRight,
+                // color: Color.fromARGB(255, 0, 104, 9),
+                decoration: BoxDecoration(
+                  gradient: LinearGradient(
+                      colors: [
+                        Color.fromARGB(255, 5, 112, 2),
+                        Color.fromARGB(255, 8, 146, 3),
+                        Color.fromARGB(255, 11, 177, 5),
+                        Color.fromARGB(255, 11, 177, 5),
+                        Color.fromARGB(255, 11, 177, 5),
+                        Color.fromARGB(255, 8, 146, 3),
+                        Color.fromARGB(255, 5, 112, 2),
+                        //add more colors for gradient
+                      ],
+                      begin: Alignment.topLeft, //begin of the gradient color
+                      end: Alignment.bottomRight, //end of the gradient color
+                      stops: [
+                        0,
+                        0.2,
+                        0.3,
+                        0.5,
+                        0.7,
+                        0.8,
+                        1
+                      ] //stops for individual color
+                      //set the stops number equal to numbers of color
                       ),
-                    ),
-                    selectedchoices.isEmpty
-                        ? Text(
-                            'Please select an item',
-                            textAlign: TextAlign.center,
-                            style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 7.sp,
-                            ),
-                          )
-                        : Consumer<ShoppingCart>(
-                            builder: (context, provider, child) {
-                            return Text(
-                              '${provider.ordersNumber} items in list',
+                ),
+                width: double.infinity,
+                child: Padding(
+                  padding: EdgeInsets.fromLTRB(3.w, 5, 3.w, 5),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text(
+                        'My Order - ${context.watch<ShoppingCart>().newordermethod}',
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 7.sp,
+                        ),
+                      ),
+                      selectedchoices.isEmpty
+                          ? Text(
+                              'Please select an item',
                               textAlign: TextAlign.center,
                               style: TextStyle(
                                 color: Colors.white,
                                 fontSize: 7.sp,
                               ),
-                            );
-                          }),
-                  ],
+                            )
+                          : Consumer<ShoppingCart>(
+                              builder: (context, provider, child) {
+                              return Text(
+                                '${provider.ordersNumber} items in list',
+                                textAlign: TextAlign.center,
+                                style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 7.sp,
+                                ),
+                              );
+                            }),
+                    ],
+                  ),
                 ),
               ),
             ),
-          ),
-          Expanded(
-            flex: 0,
-            child: Container(
-              height: 10.h,
-              color: Colors.white,
-              width: double.infinity,
-              child: Row(
-                crossAxisAlignment: CrossAxisAlignment.end,
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
-                  Expanded(
-                    child: Padding(
-                      padding: const EdgeInsets.fromLTRB(10, 6, 10, 6),
-                      child: TextButton(
-                          onPressed: () {
-                            Navigator.pop(context);
-                          },
-                          child: Container(
-                              child: Center(
-                                  child: Text(
-                            "Cancel Order",
-                            style:
-                                TextStyle(fontSize: 10.sp, color: Colors.red),
-                          ))),
-                          style: ButtonStyle(
-                              shape: MaterialStateProperty.all<
-                                  RoundedRectangleBorder>(
-                            RoundedRectangleBorder(
-                              borderRadius:
-                                  BorderRadius.all(Radius.circular(1.h)),
-                              side: BorderSide(
-                                color: Colors.red,
-                                width: 0.4.h,
+            Expanded(
+              flex: 0,
+              child: Container(
+                height: 10.h,
+                color: Colors.white,
+                width: double.infinity,
+                child: Row(
+                  crossAxisAlignment: CrossAxisAlignment.end,
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    Expanded(
+                      child: Padding(
+                        padding: const EdgeInsets.fromLTRB(10, 6, 10, 6),
+                        child: TextButton(
+                            onPressed: () {
+                              Navigator.pop(context);
+                            },
+                            child: Container(
+                                child: Center(
+                                    child: Text(
+                              "Cancel Order",
+                              style:
+                                  TextStyle(fontSize: 10.sp, color: Colors.red),
+                            ))),
+                            style: ButtonStyle(
+                                shape: MaterialStateProperty.all<
+                                    RoundedRectangleBorder>(
+                              RoundedRectangleBorder(
+                                borderRadius:
+                                    BorderRadius.all(Radius.circular(1.h)),
+                                side: BorderSide(
+                                  color: Colors.red,
+                                  width: 0.4.h,
+                                ),
                               ),
-                            ),
-                          ))),
+                            ))),
+                      ),
                     ),
-                  ),
-                  Expanded(
-                    child: Padding(
-                      padding: const EdgeInsets.fromLTRB(10, 2, 10, 2),
-                      child: GestureDetector(
-                        child: Center(
-                          child: Stack(
-                            alignment: Alignment.center,
-                            children: <Widget>[
-                              Expanded(
-                                child: Container(
-                                  height: 8.h,
-                                  width: double.infinity,
-                                  child: TextButton.icon(
-                                    icon: Icon(
-                                      Icons.shopping_cart_outlined,
-                                      size: 5.h,
-                                    ),
-                                    label: Text(
-                                      "Check Cart",
-                                      style: TextStyle(
-                                        fontSize: 10.sp,
+                    Expanded(
+                      child: Padding(
+                        padding: const EdgeInsets.fromLTRB(10, 2, 10, 2),
+                        child: GestureDetector(
+                          child: Center(
+                            child: Stack(
+                              alignment: Alignment.center,
+                              children: <Widget>[
+                                Expanded(
+                                  child: Container(
+                                    height: 8.h,
+                                    width: double.infinity,
+                                    child: TextButton.icon(
+                                      icon: Icon(
+                                        Icons.shopping_cart_outlined,
+                                        size: 5.h,
                                       ),
-                                    ),
-                                    onPressed: () {
-                                      if (selectedchoices.isEmpty) {
-                                        //toast message
-                                        Fluttertoast.showToast(
-                                            msg: "Please select an item");
-                                      } else {
-                                        Navigator.pushNamed(context, '/third');
-                                      }
-                                    },
-                                    style: TextButton.styleFrom(
-                                      backgroundColor:
-                                          Color.fromARGB(255, 11, 177, 5),
-                                      primary: Colors.white,
-                                      shape: RoundedRectangleBorder(
-                                        borderRadius: BorderRadius.all(
-                                          Radius.circular(1.h),
+                                      label: Text(
+                                        "Check Cart",
+                                        style: TextStyle(
+                                          fontSize: 10.sp,
+                                        ),
+                                      ),
+                                      onPressed: () {
+                                        if (selectedchoices.isEmpty) {
+                                          //toast message
+                                          Fluttertoast.showToast(
+                                              msg: "Please select an item");
+                                        } else {
+                                          Navigator.pushNamed(
+                                              context, '/third');
+                                        }
+                                      },
+                                      style: TextButton.styleFrom(
+                                        backgroundColor:
+                                            Color.fromARGB(255, 11, 177, 5),
+                                        primary: Colors.white,
+                                        shape: RoundedRectangleBorder(
+                                          borderRadius: BorderRadius.all(
+                                            Radius.circular(1.h),
+                                          ),
                                         ),
                                       ),
                                     ),
                                   ),
                                 ),
-                              ),
-                            ],
+                              ],
+                            ),
                           ),
                         ),
                       ),
                     ),
-                  ),
-                ],
+                  ],
+                ),
               ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }
@@ -560,8 +558,8 @@ class CartlistScreenMobile extends StatelessWidget {
                                               ),
                                               Expanded(
                                                 child: Padding(
-                                                  padding:
-                                                      EdgeInsets.only(left: 1.w),
+                                                  padding: EdgeInsets.only(
+                                                      left: 1.w),
                                                   child: Text(
                                                     item.title,
                                                     style: TextStyle(
@@ -620,10 +618,10 @@ class CartlistScreenMobile extends StatelessWidget {
                               width: 20.w,
                               child: Center(
                                   child: Text(
-                                    "Add More",
-                                    style: TextStyle(
-                                        fontSize: 12.sp, color: Colors.orange),
-                                  ))),
+                                "Add More",
+                                style: TextStyle(
+                                    fontSize: 12.sp, color: Colors.orange),
+                              ))),
                           style: ButtonStyle(
                               shape: MaterialStateProperty.all<
                                       RoundedRectangleBorder>(
@@ -691,5 +689,4 @@ class CartlistScreenMobile extends StatelessWidget {
           ),
         ],
       ));
-
 }
