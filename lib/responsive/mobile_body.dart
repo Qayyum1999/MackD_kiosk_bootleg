@@ -18,201 +18,218 @@ class _MenuScreenMobileState extends State<MenuScreenMobile> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: Colors.grey.shade50,
-      body: Expanded(
-        child: Column(
+    return Expanded(
+      child: Scaffold(
+        backgroundColor: Colors.grey.shade50,
+        body: Column(
           children: [
-            Stack(
-              children: [
-                Container(
-                  height: 10.h,
-                  width: 100.w,
-                  decoration: BoxDecoration(
-                    gradient: LinearGradient(
-                        colors: [
-                          Color.fromARGB(255, 177, 17, 5),
-                          Color.fromARGB(255, 235, 33, 19),
-                          Colors.red,
-                          Colors.redAccent,
-                          Colors.red,
-                          Color.fromARGB(255, 235, 33, 19),
-                          Color.fromARGB(255, 177, 17, 5),
-                          //add more colors for gradient
-                        ],
-                        begin: Alignment.topLeft, //begin of the gradient color
-                        end: Alignment.bottomRight, //end of the gradient color
-                        stops: [
-                          0,
-                          0.1,
-                          0.3,
-                          0.5,
-                          0.7,
-                          0.9,
-                          1
-                        ] //stops for individual color
-                        //set the stops number equal to numbers of color
-                        ),
-                  ),
-                ),
-                Center(
-                  child: Container(
-                    alignment: Alignment.center,
+            Expanded(
+              flex: 0,
+              child: Stack(
+                children: [
+                  Container(
                     height: 10.h,
                     width: 100.w,
-                    decoration: const BoxDecoration(
-                        image: DecorationImage(
-                      image: AssetImage("assets/images/adsmcd.png"),
-                      fit: BoxFit.cover,
-                    )), // button text
+                    decoration: BoxDecoration(
+                      gradient: LinearGradient(
+                          colors: [
+                            Color.fromARGB(255, 177, 17, 5),
+                            Color.fromARGB(255, 235, 33, 19),
+                            Colors.red,
+                            Colors.redAccent,
+                            Colors.red,
+                            Color.fromARGB(255, 235, 33, 19),
+                            Color.fromARGB(255, 177, 17, 5),
+                            //add more colors for gradient
+                          ],
+                          begin:
+                              Alignment.topLeft, //begin of the gradient color
+                          end:
+                              Alignment.bottomRight, //end of the gradient color
+                          stops: [
+                            0,
+                            0.1,
+                            0.3,
+                            0.5,
+                            0.7,
+                            0.9,
+                            1
+                          ] //stops for individual color
+                          //set the stops number equal to numbers of color
+                          ),
+                    ),
                   ),
-                ),
-              ],
+                  Center(
+                    child: Container(
+                      alignment: Alignment.center,
+                      height: 10.h,
+                      width: 100.w,
+                      decoration: const BoxDecoration(
+                          image: DecorationImage(
+                        image: AssetImage("assets/images/adsmcd.png"),
+                        fit: BoxFit.cover,
+                      )), // button text
+                    ),
+                  ),
+                ],
+              ),
             ),
-            Stack(
-              children: [
-                Padding(
-                  padding: const EdgeInsets.only(top: 18.0, right: 70),
-                  child: Container(
-                    alignment: Alignment.topCenter,
-                    child: Text(
-                      "Burgers",
-                      style: TextStyle(
-                        fontSize: 28,
-                        fontWeight: FontWeight.w900,
+            Expanded(
+              child: Stack(
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.only(top: 18.0, right: 70),
+                    child: Container(
+                      alignment: Alignment.topCenter,
+                      child: Text(
+                        "Burgers",
+                        style: TextStyle(
+                          fontSize: 28,
+                          fontWeight: FontWeight.w900,
+                        ),
                       ),
                     ),
                   ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Row(
-                    children: [
-                      // list of category
-                      Expanded(
-                        child: Padding(
-                            padding: const EdgeInsets.only(top: 8.0),
+                  Expanded(
+                    child: Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Row(
+                        children: [
+                          // list of category
+                          Expanded(
                             child: Padding(
-                              padding: const EdgeInsets.all(8.0),
-                              child: Container(
-                                height: 80.h,
-                                width: 80.h,
-                                child: ListView(
-                                  children: <Widget>[
-                                    CategoryItem(
-                                      imageUrl:
-                                          'assets/images/quarter_pounder.png',
-                                      name: 'Burgers',
+                                padding: const EdgeInsets.only(top: 8.0),
+                                child: Padding(
+                                  padding: const EdgeInsets.all(8.0),
+                                  child: Container(
+                                    height: 80.h,
+                                    width: 80.h,
+                                    child: ListView(
+                                      children: <Widget>[
+                                        CategoryItem(
+                                          imageUrl:
+                                              'assets/images/quarter_pounder.png',
+                                          name: 'Burgers',
+                                        ),
+                                        CategoryItem(
+                                          name: "Happy Meal",
+                                          imageUrl:
+                                              'assets/images/happy_meal.png',
+                                        ),
+                                        CategoryItem(
+                                          name: "Beverages",
+                                          imageUrl:
+                                              'assets/images/beverages.png',
+                                        ),
+                                        CategoryItem(
+                                          name: "Fries",
+                                          imageUrl:
+                                              'assets/images/snacks_and_sides.png',
+                                        ),
+                                        CategoryItem(
+                                          imageUrl:
+                                              'assets/images/bacon_ranch_salad.png',
+                                          name: 'Snacks & Sides',
+                                        ),
+                                        CategoryItem(
+                                          name: "Chicken",
+                                          imageUrl: 'assets/images/chicken.png',
+                                        ),
+                                        CategoryItem(
+                                          imageUrl:
+                                              'assets/images/quarter_pounder.png',
+                                          name: 'Burgers',
+                                        ),
+                                        CategoryItem(
+                                          name: "Happy Meal",
+                                          imageUrl:
+                                              'assets/images/happy_meal.png',
+                                        ),
+                                        CategoryItem(
+                                          name: "Beverages",
+                                          imageUrl:
+                                              'assets/images/beverages.png',
+                                        ),
+                                        CategoryItem(
+                                          name: "Fries",
+                                          imageUrl:
+                                              'assets/images/snacks_and_sides.png',
+                                        ),
+                                        CategoryItem(
+                                          imageUrl:
+                                              'assets/images/bacon_ranch_salad.png',
+                                          name: 'Snacks & Sides',
+                                        ),
+                                        CategoryItem(
+                                          name: "Chicken",
+                                          imageUrl: 'assets/images/chicken.png',
+                                        ),
+                                      ],
                                     ),
-                                    CategoryItem(
-                                      name: "Happy Meal",
-                                      imageUrl: 'assets/images/happy_meal.png',
-                                    ),
-                                    CategoryItem(
-                                      name: "Beverages",
-                                      imageUrl: 'assets/images/beverages.png',
-                                    ),
-                                    CategoryItem(
-                                      name: "Fries",
-                                      imageUrl:
-                                          'assets/images/snacks_and_sides.png',
-                                    ),
-                                    CategoryItem(
-                                      imageUrl:
-                                          'assets/images/bacon_ranch_salad.png',
-                                      name: 'Snacks & Sides',
-                                    ),
-                                    CategoryItem(
-                                      name: "Chicken",
-                                      imageUrl: 'assets/images/chicken.png',
-                                    ),
-                                    CategoryItem(
-                                      imageUrl:
-                                          'assets/images/quarter_pounder.png',
-                                      name: 'Burgers',
-                                    ),
-                                    CategoryItem(
-                                      name: "Happy Meal",
-                                      imageUrl: 'assets/images/happy_meal.png',
-                                    ),
-                                    CategoryItem(
-                                      name: "Beverages",
-                                      imageUrl: 'assets/images/beverages.png',
-                                    ),
-                                    CategoryItem(
-                                      name: "Fries",
-                                      imageUrl:
-                                          'assets/images/snacks_and_sides.png',
-                                    ),
-                                    CategoryItem(
-                                      imageUrl:
-                                          'assets/images/bacon_ranch_salad.png',
-                                      name: 'Snacks & Sides',
-                                    ),
-                                    CategoryItem(
-                                      name: "Chicken",
-                                      imageUrl: 'assets/images/chicken.png',
-                                    ),
-                                  ],
+                                  ),
+                                )),
+                          ),
+
+                          // grid of menu items
+                          Expanded(
+                            flex: 4,
+                            child: Padding(
+                              padding: const EdgeInsets.only(top: 45.0),
+                              child: SizedBox(
+                                width: double.infinity,
+                                child: GridView.builder(
+                                  itemCount: choices.length,
+                                  gridDelegate:
+                                      const SliverGridDelegateWithFixedCrossAxisCount(
+                                          crossAxisCount: 3),
+                                  itemBuilder:
+                                      (BuildContext context, int index) {
+                                    return Center(
+                                      child: GestureDetector(
+                                        child: Menuitem(choice: choices[index]),
+                                        onTap: () {
+                                          context
+                                              .read<ShoppingCart>()
+                                              .increaseOrderNumber();
+                                          // int noquantity =
+                                          //     int.parse(choices[index].quantity);
+                                          // String squantity = '${noquantity++}';
+
+                                          context
+                                              .read<ShoppingCart>()
+                                              .addselecteditem(
+                                                Choice(
+                                                  title: choices[index].title,
+                                                  imageUrl:
+                                                      choices[index].imageUrl,
+                                                  price: choices[index].price,
+                                                  quantity:
+                                                      choices[index].quantity,
+                                                  category:
+                                                      choices[index].category,
+                                                ),
+                                              );
+
+                                          context
+                                              .read<ShoppingCart>()
+                                              .calculateAddTotalPrice(
+                                                  choices[index].quantity!,
+                                                  double.parse(
+                                                      choices[index].price));
+                                        },
+                                      ),
+                                    );
+                                  },
                                 ),
                               ),
-                            )),
-                      ),
-
-                      // grid of menu items
-                      Expanded(
-                        flex: 4,
-                        child: Padding(
-                          padding: const EdgeInsets.only(top: 45.0),
-                          child: SizedBox(
-                            width: double.infinity,
-                            child: GridView.builder(
-                              itemCount: choices.length,
-                              gridDelegate:
-                                  const SliverGridDelegateWithFixedCrossAxisCount(
-                                      crossAxisCount: 3),
-                              itemBuilder: (BuildContext context, int index) {
-                                return Center(
-                                  child: GestureDetector(
-                                    child: Menuitem(choice: choices[index]),
-                                    onTap: () {
-                                      context
-                                          .read<ShoppingCart>()
-                                          .increaseOrderNumber();
-                                      // int noquantity =
-                                      //     int.parse(choices[index].quantity);
-                                      // String squantity = '${noquantity++}';
-
-                                      context
-                                          .read<ShoppingCart>()
-                                          .addselecteditem(
-                                            Choice(
-                                              title: choices[index].title,
-                                              imageUrl: choices[index].imageUrl,
-                                              price: choices[index].price,
-                                              quantity: choices[index].quantity,
-                                              category: choices[index].category,
-                                            ),
-                                          );
-
-                                      context
-                                          .read<ShoppingCart>()
-                                          .calculateAddTotalPrice(
-                                              choices[index].quantity!,
-                                              double.parse(
-                                                  choices[index].price));
-                                    },
-                                  ),
-                                );
-                              },
                             ),
                           ),
-                        ),
+                        ],
                       ),
-                    ],
+                    ),
                   ),
-                ),
-              ],
+                ],
+              ),
             ),
             Expanded(
               flex: 0,
@@ -251,34 +268,38 @@ class _MenuScreenMobileState extends State<MenuScreenMobile> {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Text(
-                        'My Order - ${context.watch<ShoppingCart>().newordermethod}',
-                        textAlign: TextAlign.center,
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 7.sp,
+                      Expanded(
+                        child: Text(
+                          'My Order - ${context.watch<ShoppingCart>().newordermethod}',
+                          textAlign: TextAlign.center,
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 7.sp,
+                          ),
                         ),
                       ),
-                      selectedchoices.isEmpty
-                          ? Text(
-                              'Please select an item',
-                              textAlign: TextAlign.center,
-                              style: TextStyle(
-                                color: Colors.white,
-                                fontSize: 7.sp,
-                              ),
-                            )
-                          : Consumer<ShoppingCart>(
-                              builder: (context, provider, child) {
-                              return Text(
-                                '${provider.ordersNumber} items in list',
+                      Expanded(
+                        child: selectedchoices.isEmpty
+                            ? Text(
+                                'Please select an item',
                                 textAlign: TextAlign.center,
                                 style: TextStyle(
                                   color: Colors.white,
                                   fontSize: 7.sp,
                                 ),
-                              );
-                            }),
+                              )
+                            : Consumer<ShoppingCart>(
+                                builder: (context, provider, child) {
+                                return Text(
+                                  '${provider.ordersNumber} items in list',
+                                  textAlign: TextAlign.center,
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 7.sp,
+                                  ),
+                                );
+                              }),
+                      ),
                     ],
                   ),
                 ),
@@ -330,39 +351,36 @@ class _MenuScreenMobileState extends State<MenuScreenMobile> {
                             child: Stack(
                               alignment: Alignment.center,
                               children: <Widget>[
-                                Expanded(
-                                  child: Container(
-                                    height: 8.h,
-                                    width: double.infinity,
-                                    child: TextButton.icon(
-                                      icon: Icon(
-                                        Icons.shopping_cart_outlined,
-                                        size: 5.h,
+                                Container(
+                                  height: 8.h,
+                                  width: double.infinity,
+                                  child: TextButton.icon(
+                                    icon: Icon(
+                                      Icons.shopping_cart_outlined,
+                                      size: 5.h,
+                                    ),
+                                    label: Text(
+                                      "Check Cart",
+                                      style: TextStyle(
+                                        fontSize: 10.sp,
                                       ),
-                                      label: Text(
-                                        "Check Cart",
-                                        style: TextStyle(
-                                          fontSize: 10.sp,
-                                        ),
-                                      ),
-                                      onPressed: () {
-                                        if (selectedchoices.isEmpty) {
-                                          //toast message
-                                          Fluttertoast.showToast(
-                                              msg: "Please select an item");
-                                        } else {
-                                          Navigator.pushNamed(
-                                              context, '/third');
-                                        }
-                                      },
-                                      style: TextButton.styleFrom(
-                                        backgroundColor:
-                                            Color.fromARGB(255, 11, 177, 5),
-                                        primary: Colors.white,
-                                        shape: RoundedRectangleBorder(
-                                          borderRadius: BorderRadius.all(
-                                            Radius.circular(1.h),
-                                          ),
+                                    ),
+                                    onPressed: () {
+                                      if (selectedchoices.isEmpty) {
+                                        //toast message
+                                        Fluttertoast.showToast(
+                                            msg: "Please select an item");
+                                      } else {
+                                        Navigator.pushNamed(context, '/third');
+                                      }
+                                    },
+                                    style: TextButton.styleFrom(
+                                      backgroundColor:
+                                          Color.fromARGB(255, 11, 177, 5),
+                                      primary: Colors.white,
+                                      shape: RoundedRectangleBorder(
+                                        borderRadius: BorderRadius.all(
+                                          Radius.circular(1.h),
                                         ),
                                       ),
                                     ),

@@ -13,9 +13,9 @@ class Menuitem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: Card(
-        child: Expanded(
+    return Expanded(
+      child: Container(
+        child: Card(
           child: Padding(
             padding: EdgeInsets.all(10),
             child: Column(
@@ -23,12 +23,9 @@ class Menuitem extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: <Widget>[
                 Expanded(
-                  child: SizedBox(
-                    height: 20.h,
-                    width: 10.h,
-                    child: Image.asset(
-                      choice.imageUrl,
-                    ),
+                  child: Image.asset(
+                    choice.imageUrl, height: 20.h,
+                width: 10.h,
                   ),
                 ),
                 Text(
