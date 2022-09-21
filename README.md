@@ -12,8 +12,8 @@ Foodkiosk.apk (22.0MB)    vs   Foodkiosk-debug.apk (81.2MB)
 
 I'll be fixing the build release and update the release on the google drive.
 
-To download the .apk file, click the link here:
-gdrive: https://drive.google.com/drive/folders/1L5g9hRYoXyv_6lqdkprDG0AAtd9V_zSM?usp=sharing
+To download the .apk file, click the gdrive link here:
+ https://drive.google.com/drive/folders/1L5g9hRYoXyv_6lqdkprDG0AAtd9V_zSM?usp=sharing
 
 To use this .apk file:
 
