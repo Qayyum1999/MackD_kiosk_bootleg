@@ -4,13 +4,15 @@ A new Flutter project.
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+For some reason, there is a bug on the build release file, so please install the debug release file on
+the android device to see it works properly.
 
-A few resources to get you started if this is your first Flutter project:
+Foodkiosk.apk (22.0MB)    vs   Foodkiosk-debug.apk (81.2MB)
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+I'll be fixing the build release and update the release on the google drive.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+To use this .apk file:
+
+1. Download the "Foodkiosk-debug.apk" file on any android ONLY device.
+2. Install it. Make sure your device support external installation from unknown device.
+3. Click the app and run.
