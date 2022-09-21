@@ -21,6 +21,6 @@ To download the .apk file, click the gdrive link here:
 To use this .apk file:
 
 1. Download the "Foodkiosk-debug.apk" file on any android ONLY device.
-2. Install it. Make sure your device support external installation from unknown device.
+2. Install it. Make sure your device support external installation from unknown source.
 3. Click the app and run.
 
