@@ -4,7 +4,6 @@ import 'package:sizer/sizer.dart';
 import 'package:foodkiosk/providers/shopping_cart_provider.dart';
 import 'package:provider/provider.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-
 class OrderMethod extends StatelessWidget {
   OrderMethod({Key? key}) : super(key: key);
   late String ordermethod;

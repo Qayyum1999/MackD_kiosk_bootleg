@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:foodkiosk/model/product_model.dart';
-
-List<Choice> selectedchoices = <Choice>[];
+import 'package:foodkiosk/main.dart';
 
 class ShoppingCart with ChangeNotifier {
   int _ordersNumber = 0;

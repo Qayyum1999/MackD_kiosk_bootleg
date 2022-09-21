@@ -4,7 +4,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 
 import 'package:foodkiosk/providers/shopping_cart_provider.dart';
-
+import 'package:foodkiosk/model/product_model.dart';
 import 'package:foodkiosk/screens/order_screen.dart';
 import 'package:foodkiosk/screens/payment_screen.dart';
 
@@ -36,7 +36,8 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+   MyApp({Key? key}) : super(key: key);
+
 
   @override
   Widget build(BuildContext context) {

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:foodkiosk/main.dart';
 
 import 'package:foodkiosk/model/product_model.dart';
 import 'package:foodkiosk/widget/category_item.dart';

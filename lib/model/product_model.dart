@@ -12,6 +12,7 @@ class Choice {
       required this.quantity});
 }
 
+List<Choice> selectedchoices = <Choice>[];
 List<Choice> choices = <Choice>[
   Choice(
     title: "Samurai Meal Burger",

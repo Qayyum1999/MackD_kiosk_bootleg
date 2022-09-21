@@ -17,33 +17,42 @@ class CategoryItem extends StatefulWidget {
 class _CategoryItemState extends State<CategoryItem> {
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return Padding(
+      padding: const EdgeInsets.all(2.0),
       child: Card(
-        elevation: 4,
+        elevation: 2,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.all(Radius.circular(0.5.h)),
           side: BorderSide(
             color: Colors.grey.withOpacity(0.2),
-            width: 0.1.h,
+            width: 0.5,
           ),
         ),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.stretch,
-          children: <Widget>[
-            Image.asset(
-              widget.imageUrl,
-            ),
-            Text(
-              widget.name,
-              textAlign: TextAlign.center,
-              style: TextStyle(
-                fontSize: 5.sp,
-                fontWeight: FontWeight.w500,
-                color: Colors.black,
+        child: Padding(
+          padding: const EdgeInsets.all(5.0),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: <Widget>[
+              Image.asset(
+                widget.imageUrl,
+                height: 10.h,
+                width: 10.h,
               ),
-            ),
-          ],
+              Text(
+                softWrap: false,
+                overflow: TextOverflow.ellipsis,
+                widget.name,
+                maxLines: 2,
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                  fontSize: 10.sp,
+                  fontWeight: FontWeight.w500,
+                  color: Colors.black,
+                ),
+              ),
+            ],
+          ),
         ),
       ),
     );
