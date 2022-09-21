@@ -8,14 +8,6 @@ import 'package:foodkiosk/widget/menu_item.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:sizer/sizer.dart';
 
-import 'package:flutter/material.dart';
-import 'package:foodkiosk/providers/shopping_cart_provider.dart';
-import 'package:provider/provider.dart';
-import 'package:foodkiosk/widget/menu_item.dart';
-import 'package:fluttertoast/fluttertoast.dart';
-import 'package:sizer/sizer.dart';
-import 'package:foodkiosk/model/product_model.dart';
-
 class MenuScreenMobile extends StatefulWidget {
   @override
   State<MenuScreenMobile> createState() => _MenuScreenMobileState();
@@ -71,7 +63,7 @@ class _MenuScreenMobileState extends State<MenuScreenMobile> {
                     width: 100.w,
                     decoration: const BoxDecoration(
                         image: DecorationImage(
-                      image: AssetImage("images/ads4.png"),
+                      image: AssetImage("assets/images/adsmcd.png"),
                       fit: BoxFit.cover,
                     )), // button text
                   ),
@@ -566,13 +558,15 @@ class CartlistScreenMobile extends StatelessWidget {
                                                   ),
                                                 ],
                                               ),
-                                              Padding(
-                                                padding:
-                                                    EdgeInsets.only(left: 1.w),
-                                                child: Text(
-                                                  item.title,
-                                                  style: TextStyle(
-                                                      fontSize: 10.sp),
+                                              Expanded(
+                                                child: Padding(
+                                                  padding:
+                                                      EdgeInsets.only(left: 1.w),
+                                                  child: Text(
+                                                    item.title,
+                                                    style: TextStyle(
+                                                        fontSize: 10.sp),
+                                                  ),
                                                 ),
                                               ),
                                               Text(
@@ -622,17 +616,14 @@ class CartlistScreenMobile extends StatelessWidget {
                             Navigator.pop(context);
                           },
                           child: Container(
-                              height: 8.h,
+                              height: 6.h,
                               width: 20.w,
                               child: Center(
-                                  child: Padding(
-                                padding: EdgeInsets.fromLTRB(0, 2.h, 0, 2.h),
-                                child: Text(
-                                  "Add More",
-                                  style: TextStyle(
-                                      fontSize: 12.sp, color: Colors.orange),
-                                ),
-                              ))),
+                                  child: Text(
+                                    "Add More",
+                                    style: TextStyle(
+                                        fontSize: 12.sp, color: Colors.orange),
+                                  ))),
                           style: ButtonStyle(
                               shape: MaterialStateProperty.all<
                                       RoundedRectangleBorder>(
@@ -700,4 +691,5 @@ class CartlistScreenMobile extends StatelessWidget {
           ),
         ],
       ));
+
 }

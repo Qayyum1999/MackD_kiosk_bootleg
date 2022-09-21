@@ -33,15 +33,12 @@ class ShoppingCart with ChangeNotifier {
     //bezakan order list stiap card dkt listview dengan bilangan item
     _ordersNumber++; //bilangan card widget length
     // _totalOrdersNumber++; //bilangan selected item
-    print(selectedchoices);
     notifyListeners();
   }
 
   void decreasOrderNumber() {
     _ordersNumber--;
     // _totalOrdersNumber--;
-
-    print(selectedchoices);
     notifyListeners();
   }
 
@@ -84,13 +81,11 @@ class ShoppingCart with ChangeNotifier {
 
   void addselecteditem(Choice choice) {
     selectedchoices.add(choice);
-    print(selectedchoices);
     notifyListeners();
   }
 
   void removeselecteditem(index) {
     selectedchoices.removeAt(index);
-    print(selectedchoices);
     notifyListeners();
   }
 
@@ -116,7 +111,6 @@ class ShoppingCart with ChangeNotifier {
     _newordermethod = '?';
     _newpaymentmethod = '?';
     selectedchoices.clear();
-    print(selectedchoices);
 
     notifyListeners();
   }
