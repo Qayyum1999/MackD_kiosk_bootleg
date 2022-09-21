@@ -2,6 +2,8 @@
 
 A McD-like Foodkiosk front-end project made using Flutter.
 
+checkout the demo live hosted: https://qayyum1999.github.io/flutterfoodkiosk/
+
 ## Package used
 1. Provider (State Management)
 2. Sizer  (Responsive Widget/Text)
