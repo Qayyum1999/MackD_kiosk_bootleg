@@ -22,13 +22,13 @@ class ResponsiveLayout extends StatelessWidget {
       bottom: true,
       child: LayoutBuilder(
         builder: (context, constraints) {
-          if (constraints.maxWidth < 500) {
+          if (constraints.maxWidth < 450) {
             return mobileBody;
-          } else if (constraints.maxWidth < 1000) {
+          } else if (constraints.maxWidth < 800) {
             return tabletBody;
           } else if (constraints.maxWidth < 1100) {
             return mediumtabletBody;
-          } else if (constraints.maxWidth < 1300) {
+          } else if (constraints.maxWidth < 1450) {
             return largetabletBody;
           } else {
             return desktopBody;

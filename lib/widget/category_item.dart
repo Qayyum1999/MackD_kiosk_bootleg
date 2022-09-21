@@ -1,24 +1,22 @@
 import 'package:flutter/material.dart';
 import 'package:sizer/sizer.dart';
-import 'package:foodkiosk/responsive/mobile_body.dart';
+import 'package:foodkiosk/responsive/mobilescreen/menu_mobile.dart';
 
-class CategoryItem extends StatefulWidget {
+class CategoryItem extends StatelessWidget {
   final String imageUrl;
   final String name;
+  final double responsivetextsize;
+
   CategoryItem({
     required this.imageUrl,
     required this.name,
+    required this.responsivetextsize,
   });
 
   @override
-  State<CategoryItem> createState() => _CategoryItemState();
-}
-
-class _CategoryItemState extends State<CategoryItem> {
-  @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.all(2.0),
+      padding: const EdgeInsets.all(5.0),
       child: Card(
         elevation: 2,
         shape: RoundedRectangleBorder(
@@ -31,22 +29,23 @@ class _CategoryItemState extends State<CategoryItem> {
         child: Padding(
           padding: const EdgeInsets.all(5.0),
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: <Widget>[
               Image.asset(
-                widget.imageUrl,
+                imageUrl,
                 height: 10.h,
-                width: 10.h,
+                width: 20.w,
+                scale: 0.0125.sp,
               ),
               Text(
                 softWrap: false,
                 overflow: TextOverflow.ellipsis,
-                widget.name,
+                name,
                 maxLines: 2,
                 textAlign: TextAlign.center,
                 style: TextStyle(
-                  fontSize: 10.sp,
+                  fontSize: responsivetextsize,
                   fontWeight: FontWeight.w500,
                   color: Colors.black,
                 ),

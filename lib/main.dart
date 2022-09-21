@@ -2,17 +2,20 @@ import 'package:flutter/material.dart';
 import 'package:foodkiosk/screens/finalpage_screen.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
+import 'package:sizer/sizer.dart';
 
 import 'package:foodkiosk/providers/shopping_cart_provider.dart';
-import 'package:foodkiosk/model/product_model.dart';
 import 'package:foodkiosk/screens/order_screen.dart';
 import 'package:foodkiosk/screens/payment_screen.dart';
 
-import 'package:sizer/sizer.dart';
+import 'package:foodkiosk/responsive/desktopscreen/menu_desktop.dart';
+import 'package:foodkiosk/responsive/tabletscreen/menu_tablet.dart';
+import 'package:foodkiosk/responsive/mobilescreen/menu_mobile.dart';
 
-import 'package:foodkiosk/responsive/desktop_body.dart';
-import 'package:foodkiosk/responsive/tablet_body.dart';
-import 'package:foodkiosk/responsive/mobile_body.dart';
+import 'package:foodkiosk/responsive/desktopscreen/cart_desktop.dart';
+import 'package:foodkiosk/responsive/tabletscreen/cart_tablet.dart';
+import 'package:foodkiosk/responsive/mobilescreen/cart_mobile.dart';
+
 import 'package:foodkiosk/responsive/responsive_layout.dart';
 
 // void main() {
@@ -36,8 +39,7 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
-   MyApp({Key? key}) : super(key: key);
-
+  MyApp({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -68,8 +70,8 @@ class MyApp extends StatelessWidget {
               '/third': (context) => ResponsiveLayout(
                     mobileBody: CartlistScreenMobile(),
                     tabletBody: CartListScreenTablet(),
-                    mediumtabletBody: CartListScreenDesktop(),
-                    largetabletBody: CartListScreenDesktop(),
+                    mediumtabletBody: CartListScreenTabletMedium(),
+                    largetabletBody: CartListScreenTabletMedium(),
                     desktopBody: CartListScreenDesktop(),
                   ),
 
