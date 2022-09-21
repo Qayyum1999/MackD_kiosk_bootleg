@@ -61,7 +61,7 @@ class _MenuScreenDesktopState extends State<MenuScreenDesktop> {
                     width: 50.w,
                     decoration: const BoxDecoration(
                         image: DecorationImage(
-                      image: AssetImage("images/ads4.png"),
+                      image: AssetImage("assets/images/adsmcd.png"),
                       fit: BoxFit.cover,
                     )), // button text
                   ),
@@ -86,21 +86,21 @@ class _MenuScreenDesktopState extends State<MenuScreenDesktop> {
                   ),
                 ),
                 Padding(
-                  padding: const EdgeInsets.all(8.0),
+                  padding: const EdgeInsets.all(5.0),
                   child: Row(
                     children: [
                       // list of category
                       Expanded(
-                        flex: 2,
+                        flex: 3,
                         child: AspectRatio(
-                          aspectRatio: 0.1,
+                          aspectRatio: 0.25,
                           child: Padding(
                             padding: const EdgeInsets.only(top: 15.0),
                             child: Padding(
                               padding: const EdgeInsets.all(8.0),
                               child: Container(
                                 height: 10.h,
-                                width: 10.h,
+                                width: 10.w,
                                 decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(8),
                                   color: Colors.grey[200],
@@ -173,7 +173,7 @@ class _MenuScreenDesktopState extends State<MenuScreenDesktop> {
                       Expanded(
                         flex: 20,
                         child: Padding(
-                          padding: const EdgeInsets.only(top: 10.0),
+                          padding: EdgeInsets.only(top: 10.0.h),
                           child: SizedBox(
                             width: double.infinity,
                             child: GridView.builder(
@@ -232,7 +232,7 @@ class _MenuScreenDesktopState extends State<MenuScreenDesktop> {
           Expanded(
             flex: 0,
             child: Container(
-              alignment: Alignment.centerRight,
+              alignment: Alignment.topCenter,
               // color: Color.fromARGB(255, 0, 104, 9),
               decoration: BoxDecoration(
                 gradient: LinearGradient(
@@ -271,7 +271,7 @@ class _MenuScreenDesktopState extends State<MenuScreenDesktop> {
                       textAlign: TextAlign.center,
                       style: TextStyle(
                         color: Colors.white,
-                        fontSize: 5.sp,
+                        fontSize: 3.sp,
                       ),
                     ),
                     selectedchoices.isEmpty
@@ -280,7 +280,7 @@ class _MenuScreenDesktopState extends State<MenuScreenDesktop> {
                             textAlign: TextAlign.center,
                             style: TextStyle(
                               color: Colors.white,
-                              fontSize: 5.sp,
+                              fontSize: 3.sp,
                             ),
                           )
                         : Consumer<ShoppingCart>(
@@ -290,7 +290,7 @@ class _MenuScreenDesktopState extends State<MenuScreenDesktop> {
                               textAlign: TextAlign.center,
                               style: TextStyle(
                                 color: Colors.white,
-                                fontSize: 5.sp,
+                                fontSize: 3.sp,
                               ),
                             );
                           }),
@@ -302,7 +302,7 @@ class _MenuScreenDesktopState extends State<MenuScreenDesktop> {
           Expanded(
             flex: 0,
             child: Container(
-              height: 10.h,
+              height: 8.h,
               color: Colors.white,
               width: double.infinity,
               child: Row(
@@ -312,7 +312,7 @@ class _MenuScreenDesktopState extends State<MenuScreenDesktop> {
                   Expanded(flex: 5, child: SizedBox(width: double.infinity)),
                   Expanded(
                     child: Padding(
-                      padding: const EdgeInsets.fromLTRB(10, 6, 10, 6),
+                      padding: const EdgeInsets.fromLTRB(10, 2, 10, 2),
                       child: TextButton(
                           onPressed: () {
                             Navigator.pop(context);
@@ -321,7 +321,7 @@ class _MenuScreenDesktopState extends State<MenuScreenDesktop> {
                               child: Center(
                                   child: Text(
                             "Cancel Order",
-                            style: TextStyle(fontSize: 5.sp, color: Colors.red),
+                            style: TextStyle(fontSize: 4.sp, color: Colors.red),
                           ))),
                           style: ButtonStyle(
                               shape: MaterialStateProperty.all<
@@ -348,16 +348,16 @@ class _MenuScreenDesktopState extends State<MenuScreenDesktop> {
                               Expanded(
                                 child: Container(
                                   height: 8.h,
-                                  width: 20.w,
+                                  width: 50.w,
                                   child: TextButton.icon(
                                     icon: Icon(
                                       Icons.shopping_cart_outlined,
-                                      size: 5.h,
+                                      size: 4.h,
                                     ),
                                     label: Text(
                                       "Check Cart",
                                       style: TextStyle(
-                                        fontSize: 5.sp,
+                                        fontSize: 4.sp,
                                       ),
                                     ),
                                     onPressed: () {
@@ -616,6 +616,7 @@ class CartListScreenDesktop extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.end,
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
+                  Expanded(flex: 5, child: SizedBox(width: double.infinity)),
                   Expanded(
                     child: Padding(
                       padding: const EdgeInsets.fromLTRB(20, 8, 10, 8),
@@ -632,7 +633,7 @@ class CartListScreenDesktop extends StatelessWidget {
                                 child: Text(
                                   "Add More",
                                   style: TextStyle(
-                                      fontSize: 5.sp, color: Colors.orange),
+                                      fontSize: 4.sp, color: Colors.orange),
                                 ),
                               ))),
                           style: ButtonStyle(
@@ -661,12 +662,12 @@ class CartListScreenDesktop extends StatelessWidget {
                                 child: TextButton.icon(
                                   icon: Icon(
                                     Icons.payments_rounded,
-                                    size: 5.h,
+                                    size: 4.h,
                                   ),
                                   label: Text(
                                     "Payment",
                                     style: TextStyle(
-                                      fontSize: 5.sp,
+                                      fontSize: 4.sp,
                                     ),
                                   ),
                                   onPressed: () {

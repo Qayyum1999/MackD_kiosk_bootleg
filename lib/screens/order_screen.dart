@@ -24,7 +24,7 @@ class OrderMethod extends StatelessWidget {
               height: 20.h,
               width: 20.w,
               child: SvgPicture.asset(
-                "images/logo.svg",
+                "assets/images/logo.svg",
               ),
               // decoration: const BoxDecoration(
               //     image: DecorationImage(
