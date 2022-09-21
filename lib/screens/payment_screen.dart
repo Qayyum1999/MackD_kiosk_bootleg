@@ -33,124 +33,118 @@ class PaymentMethodScreen extends StatelessWidget {
                   Container(
                     height: 15.h,
                     width: double.infinity,
-                    child: Expanded(
-                      child: Consumer<ShoppingCart>(
-                        builder: (context, provider, child) {
-                          return Padding(
-                            padding: EdgeInsets.fromLTRB(2.w, 2.h, 2.w, 2.h),
-                            child: TextButton.icon(
-                              onPressed: () {
-                                // Navigator.pop(context);
-                                paymentmethod = "Card";
-                                provider.paymentmethodprovider(paymentmethod);
-                                Navigator.pushNamed(context, '/fifth');
-                              },
-                              icon: Icon(
-                                Icons.payment_rounded,
-                                size: 10.sp,
-                              ),
-                              label: Text(
-                                "Credit/Debit Card",
-                                style: TextStyle(
-                                    fontSize: 10.sp, color: Colors.black),
-                              ),
-                              style: ButtonStyle(
-                                  shape: MaterialStateProperty.all<
-                                          RoundedRectangleBorder>(
-                                      RoundedRectangleBorder(
-                                          borderRadius: BorderRadius.all(
-                                            Radius.circular(2.h),
-                                          ),
-                                          side: BorderSide(
-                                            width: (0.4).w,
-                                            color: Colors.black,
-                                          )))),
+                    child: Consumer<ShoppingCart>(
+                      builder: (context, provider, child) {
+                        return Padding(
+                          padding: EdgeInsets.fromLTRB(2.w, 2.h, 2.w, 2.h),
+                          child: TextButton.icon(
+                            onPressed: () {
+                              // Navigator.pop(context);
+                              paymentmethod = "Card";
+                              provider.paymentmethodprovider(paymentmethod);
+                              Navigator.pushNamed(context, '/fifth');
+                            },
+                            icon: Icon(
+                              Icons.payment_rounded,
+                              size: 10.sp,
                             ),
-                          );
-                        },
-                      ),
+                            label: Text(
+                              "Credit/Debit Card",
+                              style: TextStyle(
+                                  fontSize: 10.sp, color: Colors.black),
+                            ),
+                            style: ButtonStyle(
+                                shape: MaterialStateProperty.all<
+                                        RoundedRectangleBorder>(
+                                    RoundedRectangleBorder(
+                                        borderRadius: BorderRadius.all(
+                                          Radius.circular(2.h),
+                                        ),
+                                        side: BorderSide(
+                                          width: (0.4).w,
+                                          color: Colors.black,
+                                        )))),
+                          ),
+                        );
+                      },
                     ),
                   ),
                   Container(
                     height: 15.h,
                     width: double.infinity,
-                    child: Expanded(
-                      child: Consumer<ShoppingCart>(
-                        builder: (context, provider, child) {
-                          return Padding(
-                            padding: EdgeInsets.fromLTRB(2.w, 2.h, 2.w, 2.h),
-                            child: TextButton.icon(
-                              onPressed: () {
-                                // Navigator.pop(context);
-                                paymentmethod = "QR Code";
-                                provider.paymentmethodprovider(paymentmethod);
-                                Navigator.pushNamed(context, '/fifth');
-                              },
-                              icon: Icon(
-                                Icons.qr_code_scanner_rounded,
-                                size: 10.sp,
-                              ),
-                              label: Text(
-                                "QR Code",
-                                style: TextStyle(
-                                    fontSize: 10.sp, color: Colors.black),
-                              ),
-                              style: ButtonStyle(
-                                  shape: MaterialStateProperty.all<
-                                          RoundedRectangleBorder>(
-                                      RoundedRectangleBorder(
-                                          borderRadius: BorderRadius.all(
-                                            Radius.circular(2.h),
-                                          ),
-                                          side: BorderSide(
-                                            width: (0.4).w,
-                                            color: Colors.black,
-                                          )))),
+                    child: Consumer<ShoppingCart>(
+                      builder: (context, provider, child) {
+                        return Padding(
+                          padding: EdgeInsets.fromLTRB(2.w, 2.h, 2.w, 2.h),
+                          child: TextButton.icon(
+                            onPressed: () {
+                              // Navigator.pop(context);
+                              paymentmethod = "QR Code";
+                              provider.paymentmethodprovider(paymentmethod);
+                              Navigator.pushNamed(context, '/fifth');
+                            },
+                            icon: Icon(
+                              Icons.qr_code_scanner_rounded,
+                              size: 10.sp,
                             ),
-                          );
-                        },
-                      ),
+                            label: Text(
+                              "QR Code",
+                              style: TextStyle(
+                                  fontSize: 10.sp, color: Colors.black),
+                            ),
+                            style: ButtonStyle(
+                                shape: MaterialStateProperty.all<
+                                        RoundedRectangleBorder>(
+                                    RoundedRectangleBorder(
+                                        borderRadius: BorderRadius.all(
+                                          Radius.circular(2.h),
+                                        ),
+                                        side: BorderSide(
+                                          width: (0.4).w,
+                                          color: Colors.black,
+                                        )))),
+                          ),
+                        );
+                      },
                     ),
                   ),
                   Container(
                     height: 15.h,
                     width: double.infinity,
-                    child: Expanded(
-                      child: Consumer<ShoppingCart>(
-                        builder: (context, provider, child) {
-                          return Padding(
-                            padding: EdgeInsets.fromLTRB(2.w, 2.h, 2.w, 2.h),
-                            child: TextButton.icon(
-                              onPressed: () {
-                                // Navigator.pop(context);
-                                paymentmethod = "Cash";
-                                provider.paymentmethodprovider(paymentmethod);
-                                Navigator.pushNamed(context, '/fifth');
-                              },
-                              icon: Icon(
-                                Icons.payments_sharp,
-                                size: 10.sp,
-                              ),
-                              label: Text(
-                                "Cash",
-                                style: TextStyle(
-                                    fontSize: 10.sp, color: Colors.black),
-                              ),
-                              style: ButtonStyle(
-                                  shape: MaterialStateProperty.all<
-                                          RoundedRectangleBorder>(
-                                      RoundedRectangleBorder(
-                                          borderRadius: BorderRadius.all(
-                                            Radius.circular(2.h),
-                                          ),
-                                          side: BorderSide(
-                                            width: (0.4).w,
-                                            color: Colors.black,
-                                          )))),
+                    child: Consumer<ShoppingCart>(
+                      builder: (context, provider, child) {
+                        return Padding(
+                          padding: EdgeInsets.fromLTRB(2.w, 2.h, 2.w, 2.h),
+                          child: TextButton.icon(
+                            onPressed: () {
+                              // Navigator.pop(context);
+                              paymentmethod = "Cash";
+                              provider.paymentmethodprovider(paymentmethod);
+                              Navigator.pushNamed(context, '/fifth');
+                            },
+                            icon: Icon(
+                              Icons.payments_sharp,
+                              size: 10.sp,
                             ),
-                          );
-                        },
-                      ),
+                            label: Text(
+                              "Cash",
+                              style: TextStyle(
+                                  fontSize: 10.sp, color: Colors.black),
+                            ),
+                            style: ButtonStyle(
+                                shape: MaterialStateProperty.all<
+                                        RoundedRectangleBorder>(
+                                    RoundedRectangleBorder(
+                                        borderRadius: BorderRadius.all(
+                                          Radius.circular(2.h),
+                                        ),
+                                        side: BorderSide(
+                                          width: (0.4).w,
+                                          color: Colors.black,
+                                        )))),
+                          ),
+                        );
+                      },
                     ),
                   ),
                 ],

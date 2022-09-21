@@ -270,38 +270,36 @@ class CartlistScreenMobile extends StatelessWidget {
                         child: Stack(
                           alignment: Alignment.center,
                           children: <Widget>[
-                            Expanded(
-                              child: Container(
-                                height: 8.h,
-                                width: double.infinity,
-                                child: TextButton.icon(
-                                  icon: Icon(
-                                    Icons.payments_rounded,
-                                    size: 5.h,
+                            Container(
+                              height: 6.h,
+                              width: double.infinity,
+                              child: TextButton.icon(
+                                icon: Icon(
+                                  Icons.payments_rounded,
+                                  size: 5.h,
+                                ),
+                                label: Text(
+                                  "Payment",
+                                  style: TextStyle(
+                                    fontSize: 12.sp,
                                   ),
-                                  label: Text(
-                                    "Payment",
-                                    style: TextStyle(
-                                      fontSize: 12.sp,
-                                    ),
-                                  ),
-                                  onPressed: () {
-                                    if (selectedchoices.isEmpty) {
-                                      //toast message
-                                      Fluttertoast.showToast(
-                                          msg: "Please select an item");
-                                    } else {
-                                      Navigator.pushNamed(context, '/fourth');
-                                    }
-                                  },
-                                  style: TextButton.styleFrom(
-                                    backgroundColor:
-                                        Color.fromARGB(255, 11, 177, 5),
-                                    primary: Colors.white,
-                                    shape: RoundedRectangleBorder(
-                                      borderRadius: const BorderRadius.all(
-                                        Radius.circular(10),
-                                      ),
+                                ),
+                                onPressed: () {
+                                  if (selectedchoices.isEmpty) {
+                                    //toast message
+                                    Fluttertoast.showToast(
+                                        msg: "Please select an item");
+                                  } else {
+                                    Navigator.pushNamed(context, '/fourth');
+                                  }
+                                },
+                                style: TextButton.styleFrom(
+                                  backgroundColor:
+                                      Color.fromARGB(255, 11, 177, 5),
+                                  primary: Colors.white,
+                                  shape: RoundedRectangleBorder(
+                                    borderRadius: const BorderRadius.all(
+                                      Radius.circular(10),
                                     ),
                                   ),
                                 ),
