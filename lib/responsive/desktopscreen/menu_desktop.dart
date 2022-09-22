@@ -22,6 +22,52 @@ class _MenuScreenDesktopState extends State<MenuScreenDesktop> {
       backgroundColor: Colors.grey.shade50,
       body: Column(
         children: [
+          Stack(
+            children: [
+              Container(
+                height: 10.h,
+                width: 100.w,
+                decoration: BoxDecoration(
+                  gradient: LinearGradient(
+                      colors: [
+                        Color.fromARGB(255, 177, 17, 5),
+                        Color.fromARGB(255, 235, 33, 19),
+                        Colors.red,
+                        Colors.redAccent,
+                        Colors.red,
+                        Color.fromARGB(255, 235, 33, 19),
+                        Color.fromARGB(255, 177, 17, 5),
+                        //add more colors for gradient
+                      ],
+                      begin: Alignment.topLeft, //begin of the gradient color
+                      end: Alignment.bottomRight, //end of the gradient color
+                      stops: [
+                        0,
+                        0.1,
+                        0.3,
+                        0.5,
+                        0.7,
+                        0.9,
+                        1
+                      ] //stops for individual color
+                      //set the stops number equal to numbers of color
+                      ),
+                ),
+              ),
+              Center(
+                child: Container(
+                  alignment: Alignment.center,
+                  height: 10.h,
+                  width: 40.w,
+                  decoration: const BoxDecoration(
+                      image: DecorationImage(
+                    image: AssetImage("assets/images/adsmcd.png"),
+                    fit: BoxFit.cover,
+                  )), // button text
+                ),
+              ),
+            ],
+          ),
           Container(
             alignment: Alignment.topCenter,
             child: Text(
@@ -224,48 +270,59 @@ class _MenuScreenDesktopState extends State<MenuScreenDesktop> {
               children: [
                 Expanded(
                   child: Padding(
-                    padding: const EdgeInsets.fromLTRB(10, 14, 10, 14),
-                    child: TextButton(
-                        onPressed: () {
-                          Navigator.pop(context);
-                        },
-                        child: Container(
-                            child: Center(
-                                child: Text(
-                          "Cancel Order",
-                          style: TextStyle(
-                              fontSize: responsive_Desktop_textsize,
-                              color: Colors.red),
-                        ))),
-                        style: ButtonStyle(
-                            shape: MaterialStateProperty.all<
-                                RoundedRectangleBorder>(
-                          RoundedRectangleBorder(
-                            borderRadius:
-                                BorderRadius.all(Radius.circular(1.h)),
-                            side: BorderSide(
-                              color: Colors.red,
-                              width: 0.4.h,
-                            ),
-                          ),
-                        ))),
-                  ),
-                ),
-                Expanded(
-                  child: Padding(
-                    padding: const EdgeInsets.fromLTRB(10, 0, 10, 0),
+                    padding: const EdgeInsets.fromLTRB(10, 2, 10, 2),
                     child: GestureDetector(
                       child: Center(
                         child: Stack(
                           alignment: Alignment.center,
                           children: <Widget>[
                             Container(
-                              height: 6.h,
+                              height: 8.h,
+                              width: double.infinity,
+                              child: TextButton(
+                                  child: Text(
+                                    "Cancel Order",
+                                    style: TextStyle(
+                                        fontSize: responsive_Desktop_textsize,
+                                        color: Colors.red),
+                                  ),
+                                  onPressed: () {
+                                    Navigator.pop(context);
+                                  },
+                                  style: ButtonStyle(
+                                      shape: MaterialStateProperty.all<
+                                          RoundedRectangleBorder>(
+                                    RoundedRectangleBorder(
+                                      borderRadius: BorderRadius.all(
+                                          Radius.circular(1.h)),
+                                      side: BorderSide(
+                                        color: Colors.red,
+                                        width: 0.4.h,
+                                      ),
+                                    ),
+                                  ))),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+                Expanded(
+                  child: Padding(
+                    padding: const EdgeInsets.fromLTRB(10, 2, 10, 2),
+                    child: GestureDetector(
+                      child: Center(
+                        child: Stack(
+                          alignment: Alignment.center,
+                          children: <Widget>[
+                            Container(
+                              height: 8.h,
                               width: double.infinity,
                               child: TextButton.icon(
                                 icon: Icon(
                                   Icons.shopping_cart_outlined,
-                                  size: 3.h,
+                                  size: 5.h,
                                 ),
                                 label: Text(
                                   "Check Cart",

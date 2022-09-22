@@ -236,7 +236,7 @@ class _MenuScreenMobileState extends State<MenuScreenMobile> {
                     textAlign: TextAlign.center,
                     style: TextStyle(
                       color: Colors.white,
-                      fontSize: 10.sp,
+                      fontSize: responsive_Mobile_textsize,
                     ),
                   ),
                   selectedchoices.isEmpty
@@ -245,7 +245,7 @@ class _MenuScreenMobileState extends State<MenuScreenMobile> {
                           textAlign: TextAlign.center,
                           style: TextStyle(
                             color: Colors.white,
-                            fontSize: 10.sp,
+                            fontSize: responsive_Mobile_textsize,
                           ),
                         )
                       : Consumer<ShoppingCart>(
@@ -255,7 +255,7 @@ class _MenuScreenMobileState extends State<MenuScreenMobile> {
                             textAlign: TextAlign.center,
                             style: TextStyle(
                               color: Colors.white,
-                              fontSize: 7.sp,
+                              fontSize: responsive_Mobile_textsize,
                             ),
                           );
                         }),
@@ -273,29 +273,42 @@ class _MenuScreenMobileState extends State<MenuScreenMobile> {
               children: [
                 Expanded(
                   child: Padding(
-                    padding: const EdgeInsets.fromLTRB(10, 6, 10, 6),
-                    child: TextButton(
-                        onPressed: () {
-                          Navigator.pop(context);
-                        },
-                        child: Container(
-                            child: Center(
-                                child: Text(
-                          "Cancel Order",
-                          style: TextStyle(fontSize: 12.sp, color: Colors.red),
-                        ))),
-                        style: ButtonStyle(
-                            shape: MaterialStateProperty.all<
-                                RoundedRectangleBorder>(
-                          RoundedRectangleBorder(
-                            borderRadius:
-                                BorderRadius.all(Radius.circular(1.h)),
-                            side: BorderSide(
-                              color: Colors.red,
-                              width: 0.4.h,
+                    padding: const EdgeInsets.fromLTRB(10, 2, 10, 2),
+                    child: GestureDetector(
+                      child: Center(
+                        child: Stack(
+                          alignment: Alignment.center,
+                          children: <Widget>[
+                            Container(
+                              height: 8.h,
+                              width: double.infinity,
+                              child: TextButton(
+                                  child: Text(
+                                    "Cancel Order",
+                                    style: TextStyle(
+                                        fontSize: responsive_Mobile_textsize,
+                                        color: Colors.red),
+                                  ),
+                                  onPressed: () {
+                                    Navigator.pop(context);
+                                  },
+                                  style: ButtonStyle(
+                                      shape: MaterialStateProperty.all<
+                                          RoundedRectangleBorder>(
+                                    RoundedRectangleBorder(
+                                      borderRadius: BorderRadius.all(
+                                          Radius.circular(1.h)),
+                                      side: BorderSide(
+                                        color: Colors.red,
+                                        width: 0.4.h,
+                                      ),
+                                    ),
+                                  ))),
                             ),
-                          ),
-                        ))),
+                          ],
+                        ),
+                      ),
+                    ),
                   ),
                 ),
                 Expanded(
@@ -312,12 +325,12 @@ class _MenuScreenMobileState extends State<MenuScreenMobile> {
                               child: TextButton.icon(
                                 icon: Icon(
                                   Icons.shopping_cart_outlined,
-                                  size: 5.h,
+                                  size: 4.h,
                                 ),
                                 label: Text(
                                   "Check Cart",
                                   style: TextStyle(
-                                    fontSize: 12.sp,
+                                    fontSize: responsive_Mobile_textsize,
                                   ),
                                 ),
                                 onPressed: () {

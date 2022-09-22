@@ -270,31 +270,42 @@ class _MenuScreenTabletState extends State<MenuScreenTablet> {
               children: [
                 Expanded(
                   child: Padding(
-                    padding: const EdgeInsets.fromLTRB(10, 6, 10, 6),
-                    child: TextButton(
-                        onPressed: () {
-                          Navigator.pop(context);
-                        },
-                        child: Container(
-                            child: Center(
-                                child: Text(
-                          "Cancel Order",
-                          style: TextStyle(
-                              fontSize: responsive_Tablet_textsize,
-                              color: Colors.red),
-                        ))),
-                        style: ButtonStyle(
-                            shape: MaterialStateProperty.all<
-                                RoundedRectangleBorder>(
-                          RoundedRectangleBorder(
-                            borderRadius:
-                                BorderRadius.all(Radius.circular(1.h)),
-                            side: BorderSide(
-                              color: Colors.red,
-                              width: 0.4.h,
+                    padding: const EdgeInsets.fromLTRB(10, 2, 10, 2),
+                    child: GestureDetector(
+                      child: Center(
+                        child: Stack(
+                          alignment: Alignment.center,
+                          children: <Widget>[
+                            Container(
+                              height: 8.h,
+                              width: double.infinity,
+                              child: TextButton(
+                                  child: Text(
+                                    "Cancel Order",
+                                    style: TextStyle(
+                                        fontSize: responsive_Tablet_textsize,
+                                        color: Colors.red),
+                                  ),
+                                  onPressed: () {
+                                    Navigator.pop(context);
+                                  },
+                                  style: ButtonStyle(
+                                      shape: MaterialStateProperty.all<
+                                          RoundedRectangleBorder>(
+                                    RoundedRectangleBorder(
+                                      borderRadius: BorderRadius.all(
+                                          Radius.circular(1.h)),
+                                      side: BorderSide(
+                                        color: Colors.red,
+                                        width: 0.4.h,
+                                      ),
+                                    ),
+                                  ))),
                             ),
-                          ),
-                        ))),
+                          ],
+                        ),
+                      ),
+                    ),
                   ),
                 ),
                 Expanded(
@@ -616,31 +627,43 @@ class _MenuScreenMediumTabletState extends State<MenuScreenMediumTablet> {
               children: [
                 Expanded(
                   child: Padding(
-                    padding: const EdgeInsets.fromLTRB(10, 6, 10, 6),
-                    child: TextButton(
-                        onPressed: () {
-                          Navigator.pop(context);
-                        },
-                        child: Container(
-                            child: Center(
-                                child: Text(
-                          "Cancel Order",
-                          style: TextStyle(
-                              fontSize: responsive_Tablet_Medium_textsize,
-                              color: Colors.red),
-                        ))),
-                        style: ButtonStyle(
-                            shape: MaterialStateProperty.all<
-                                RoundedRectangleBorder>(
-                          RoundedRectangleBorder(
-                            borderRadius:
-                                BorderRadius.all(Radius.circular(1.h)),
-                            side: BorderSide(
-                              color: Colors.red,
-                              width: 0.4.h,
+                    padding: const EdgeInsets.fromLTRB(10, 2, 10, 2),
+                    child: GestureDetector(
+                      child: Center(
+                        child: Stack(
+                          alignment: Alignment.center,
+                          children: <Widget>[
+                            Container(
+                              height: 8.h,
+                              width: double.infinity,
+                              child: TextButton(
+                                  child: Text(
+                                    "Cancel Order",
+                                    style: TextStyle(
+                                        fontSize:
+                                            responsive_Tablet_Medium_textsize,
+                                        color: Colors.red),
+                                  ),
+                                  onPressed: () {
+                                    Navigator.pop(context);
+                                  },
+                                  style: ButtonStyle(
+                                      shape: MaterialStateProperty.all<
+                                          RoundedRectangleBorder>(
+                                    RoundedRectangleBorder(
+                                      borderRadius: BorderRadius.all(
+                                          Radius.circular(1.h)),
+                                      side: BorderSide(
+                                        color: Colors.red,
+                                        width: 0.4.h,
+                                      ),
+                                    ),
+                                  ))),
                             ),
-                          ),
-                        ))),
+                          ],
+                        ),
+                      ),
+                    ),
                   ),
                 ),
                 Expanded(
@@ -962,31 +985,43 @@ class _MenuScreenLargeTabletState extends State<MenuScreenLargeTablet> {
               children: [
                 Expanded(
                   child: Padding(
-                    padding: const EdgeInsets.fromLTRB(10, 6, 10, 6),
-                    child: TextButton(
-                        onPressed: () {
-                          Navigator.pop(context);
-                        },
-                        child: Container(
-                            child: Center(
-                                child: Text(
-                          "Cancel Order",
-                          style: TextStyle(
-                              fontSize: responsive_Tablet_Large_textsize,
-                              color: Colors.red),
-                        ))),
-                        style: ButtonStyle(
-                            shape: MaterialStateProperty.all<
-                                RoundedRectangleBorder>(
-                          RoundedRectangleBorder(
-                            borderRadius:
-                                BorderRadius.all(Radius.circular(1.h)),
-                            side: BorderSide(
-                              color: Colors.red,
-                              width: 0.4.h,
+                    padding: const EdgeInsets.fromLTRB(10, 2, 10, 2),
+                    child: GestureDetector(
+                      child: Center(
+                        child: Stack(
+                          alignment: Alignment.center,
+                          children: <Widget>[
+                            Container(
+                              height: 8.h,
+                              width: double.infinity,
+                              child: TextButton(
+                                  child: Text(
+                                    "Cancel Order",
+                                    style: TextStyle(
+                                        fontSize:
+                                            responsive_Tablet_Large_textsize,
+                                        color: Colors.red),
+                                  ),
+                                  onPressed: () {
+                                    Navigator.pop(context);
+                                  },
+                                  style: ButtonStyle(
+                                      shape: MaterialStateProperty.all<
+                                          RoundedRectangleBorder>(
+                                    RoundedRectangleBorder(
+                                      borderRadius: BorderRadius.all(
+                                          Radius.circular(1.h)),
+                                      side: BorderSide(
+                                        color: Colors.red,
+                                        width: 0.4.h,
+                                      ),
+                                    ),
+                                  ))),
                             ),
-                          ),
-                        ))),
+                          ],
+                        ),
+                      ),
+                    ),
                   ),
                 ),
                 Expanded(
