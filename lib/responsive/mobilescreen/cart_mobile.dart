@@ -244,7 +244,7 @@ class CartlistScreenMobile extends StatelessWidget {
                           },
                           child: Container(
                               height: 6.h,
-                              width: 20.w,
+                              width: double.infinity,
                               child: Center(
                                   child: Text(
                                 "Add More",
@@ -265,51 +265,43 @@ class CartlistScreenMobile extends StatelessWidget {
                   ),
                   Expanded(
                     child: Padding(
-                      padding: const EdgeInsets.fromLTRB(10, 8, 20, 8),
-                      child: GestureDetector(
-                        child: Stack(
-                          alignment: Alignment.center,
-                          children: <Widget>[
-                            Container(
-                              height: 6.h,
-                              width: double.infinity,
-                              child: TextButton.icon(
-                                icon: Icon(
-                                  Icons.payments_rounded,
-                                  size: 5.h,
-                                ),
-                                label: Text(
-                                  "Payment",
-                                  style: TextStyle(
-                                    fontSize: 12.sp,
-                                  ),
-                                ),
-                                onPressed: () {
-                                  if (selectedchoices.isEmpty) {
-                                    //toast message
-                                    Fluttertoast.showToast(
-                                        msg: "Please select an item");
-                                  } else {
-                                    Navigator.pushNamed(context, '/fourth');
-                                  }
-                                },
-                                style: TextButton.styleFrom(
-                                  backgroundColor:
-                                      Color.fromARGB(255, 11, 177, 5),
-                                  primary: Colors.white,
-                                  shape: RoundedRectangleBorder(
-                                    borderRadius: const BorderRadius.all(
-                                      Radius.circular(10),
-                                    ),
-                                  ),
-                                ),
-                              ),
+                      padding: const EdgeInsets.fromLTRB(20, 8, 10, 8),
+                      child: TextButton.icon(
+                        onPressed: () {
+                          if (selectedchoices.isEmpty) {
+                            //toast message
+                            Fluttertoast.showToast(
+                                msg: "Please select an item");
+                          } else {
+                            Navigator.pushNamed(context, '/fourth');
+                          }
+                        },
+                        icon: Icon(
+                          Icons.payments_rounded,
+                          size: 5.h,
+                        ),
+                        label: Container(
+                            height: 6.h,
+                            width: double.infinity,
+                            child: Center(
+                                child: Text(
+                              "Payment",
+                              style: TextStyle(
+                                  fontSize: 12.sp, color: Colors.white),
+                            ))),
+                        style: TextButton.styleFrom(
+                          backgroundColor: Color.fromARGB(255, 11, 177, 5),
+                          primary: Colors.white,
+                          shape: RoundedRectangleBorder(
+                            borderRadius: const BorderRadius.all(
+                              Radius.circular(10),
                             ),
-                          ],
+                          ),
                         ),
                       ),
                     ),
                   ),
+               
                 ],
               ),
             ),

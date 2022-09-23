@@ -30,14 +30,14 @@ class CartListScreenDesktop extends StatelessWidget {
                       Text(
                         "My Order List",
                         style: TextStyle(
-                            fontSize: 8.sp, fontWeight: FontWeight.w700),
+                            fontSize: 5.sp, fontWeight: FontWeight.w700),
                       ),
                       SizedBox(
                         width: 2.w,
                       ),
                       if (choices.length > 0)
                         CircleAvatar(
-                          radius: 2.w,
+                          radius: 1.w,
                           backgroundColor: Colors.red,
                           foregroundColor: Colors.white,
                           child: FittedBox(
@@ -50,7 +50,7 @@ class CartListScreenDesktop extends StatelessWidget {
                                     '${context.watch<ShoppingCart>().ordersNumber}',
                                     key: Key('counterState'),
                                     style: TextStyle(
-                                      fontSize: 7.sp,
+                                      fontSize: 5.sp,
                                       fontWeight: FontWeight.normal,
                                     ),
                                   ),
@@ -186,14 +186,16 @@ class CartListScreenDesktop extends StatelessWidget {
                                                     EdgeInsets.only(left: 1.w),
                                                 child: Text(
                                                   item.title,
-                                                  style:
-                                                      TextStyle(fontSize: 5.sp),
+                                                  style: TextStyle(
+                                                      fontSize:
+                                                          responsive_Desktop_textsize),
                                                 ),
                                               ),
                                               Text(
                                                 item.price,
-                                                style:
-                                                    TextStyle(fontSize: 5.sp),
+                                                style: TextStyle(
+                                                    fontSize:
+                                                        responsive_Desktop_textsize),
                                               ),
                                             ],
                                           ),
@@ -214,7 +216,7 @@ class CartListScreenDesktop extends StatelessWidget {
                 alignment: Alignment.bottomRight,
                 child: Text(
                   "Total Amount:        RM${context.watch<ShoppingCart>().totalPriceNumber.toStringAsFixed(2)}",
-                  style: TextStyle(fontSize: 6.sp, fontWeight: FontWeight.bold),
+                  style: TextStyle(fontSize: 5.sp, fontWeight: FontWeight.bold),
                 ),
               ),
             ),
@@ -245,7 +247,8 @@ class CartListScreenDesktop extends StatelessWidget {
                                 child: Text(
                                   "Add More",
                                   style: TextStyle(
-                                      fontSize: 4.sp, color: Colors.orange),
+                                      fontSize: responsive_Desktop_textsize,
+                                      color: Colors.orange),
                                 ),
                               ))),
                           style: ButtonStyle(
@@ -262,47 +265,42 @@ class CartListScreenDesktop extends StatelessWidget {
                   ),
                   Expanded(
                     child: Padding(
-                      padding: const EdgeInsets.fromLTRB(10, 8, 20, 8),
-                      child: GestureDetector(
-                        child: Stack(
-                          alignment: Alignment.center,
-                          children: <Widget>[
-                            Container(
-                              height: 8.h,
-                              width: double.infinity,
-                              child: TextButton.icon(
-                                icon: Icon(
-                                  Icons.payments_rounded,
-                                  size: 4.h,
-                                ),
-                                label: Text(
-                                  "Payment",
-                                  style: TextStyle(
-                                    fontSize: 4.sp,
-                                  ),
-                                ),
-                                onPressed: () {
-                                  if (selectedchoices.isEmpty) {
-                                    //toast message
-                                    Fluttertoast.showToast(
-                                        msg: "Please select an item");
-                                  } else {
-                                    Navigator.pushNamed(context, '/fourth');
-                                  }
-                                },
-                                style: TextButton.styleFrom(
-                                  backgroundColor:
-                                      Color.fromARGB(255, 11, 177, 5),
-                                  primary: Colors.white,
-                                  shape: RoundedRectangleBorder(
-                                    borderRadius: const BorderRadius.all(
-                                      Radius.circular(10),
-                                    ),
-                                  ),
-                                ),
+                      padding: const EdgeInsets.fromLTRB(20, 8, 10, 8),
+                      child: TextButton.icon(
+                        onPressed: () {
+                          if (selectedchoices.isEmpty) {
+                            //toast message
+                            Fluttertoast.showToast(
+                                msg: "Please select an item");
+                          } else {
+                            Navigator.pushNamed(context, '/fourth');
+                          }
+                        },
+                        icon: Icon(
+                          Icons.payments_rounded,
+                          size: 3.h,
+                        ),
+                        label: Container(
+                            height: 8.h,
+                            width: 20.w,
+                            child: Center(
+                                child: Padding(
+                              padding: EdgeInsets.fromLTRB(0, 2.h, 0, 2.h),
+                              child: Text(
+                                "Payment",
+                                style: TextStyle(
+                                    fontSize: responsive_Desktop_textsize,
+                                    color: Colors.white),
                               ),
+                            ))),
+                        style: TextButton.styleFrom(
+                          backgroundColor: Color.fromARGB(255, 11, 177, 5),
+                          primary: Colors.white,
+                          shape: RoundedRectangleBorder(
+                            borderRadius: const BorderRadius.all(
+                              Radius.circular(10),
                             ),
-                          ],
+                          ),
                         ),
                       ),
                     ),

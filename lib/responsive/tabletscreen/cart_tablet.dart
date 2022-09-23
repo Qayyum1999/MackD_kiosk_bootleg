@@ -262,47 +262,42 @@ class CartListScreenTablet extends StatelessWidget {
                   ),
                   Expanded(
                     child: Padding(
-                      padding: const EdgeInsets.fromLTRB(10, 8, 20, 8),
-                      child: GestureDetector(
-                        child: Stack(
-                          alignment: Alignment.center,
-                          children: <Widget>[
-                            Container(
-                              height: 8.h,
-                              width: double.infinity,
-                              child: TextButton.icon(
-                                icon: Icon(
-                                  Icons.payments_rounded,
-                                  size: 5.h,
-                                ),
-                                label: Text(
-                                  "Payment",
-                                  style: TextStyle(
+                      padding: const EdgeInsets.fromLTRB(20, 8, 10, 8),
+                      child: TextButton.icon(
+                        onPressed: () {
+                          if (selectedchoices.isEmpty) {
+                            //toast message
+                            Fluttertoast.showToast(
+                                msg: "Please select an item");
+                          } else {
+                            Navigator.pushNamed(context, '/fourth');
+                          }
+                        },
+                        icon: Icon(
+                          Icons.payments_rounded,
+                          size: 5.h,
+                        ),
+                        label: Container(
+                            height: 8.h,
+                            width: 20.w,
+                            child: Center(
+                                child: Padding(
+                              padding: EdgeInsets.fromLTRB(0, 2.h, 0, 2.h),
+                              child: Text(
+                                "Payment",
+                                style: TextStyle(
                                     fontSize: responsive_Tablet_textsize,
-                                  ),
-                                ),
-                                onPressed: () {
-                                  if (selectedchoices.isEmpty) {
-                                    //toast message
-                                    Fluttertoast.showToast(
-                                        msg: "Please select an item");
-                                  } else {
-                                    Navigator.pushNamed(context, '/fourth');
-                                  }
-                                },
-                                style: TextButton.styleFrom(
-                                  backgroundColor:
-                                      Color.fromARGB(255, 11, 177, 5),
-                                  primary: Colors.white,
-                                  shape: RoundedRectangleBorder(
-                                    borderRadius: const BorderRadius.all(
-                                      Radius.circular(10),
-                                    ),
-                                  ),
-                                ),
+                                    color: Colors.white),
                               ),
+                            ))),
+                        style: TextButton.styleFrom(
+                          backgroundColor: Color.fromARGB(255, 11, 177, 5),
+                          primary: Colors.white,
+                          shape: RoundedRectangleBorder(
+                            borderRadius: const BorderRadius.all(
+                              Radius.circular(10),
                             ),
-                          ],
+                          ),
                         ),
                       ),
                     ),
@@ -495,14 +490,16 @@ class CartListScreenTabletMedium extends StatelessWidget {
                                                   overflow:
                                                       TextOverflow.ellipsis,
                                                   maxLines: 2,
-                                                  style:
-                                                      TextStyle(fontSize: 7.sp),
+                                                  style: TextStyle(
+                                                      fontSize:
+                                                          responsive_Tablet_Medium_textsize),
                                                 ),
                                               ),
                                               Text(
                                                 item.price,
                                                 style: TextStyle(
-                                                  fontSize: 7.sp,
+                                                  fontSize:
+                                                      responsive_Tablet_Medium_textsize,
                                                 ),
                                               ),
                                             ],
@@ -573,47 +570,42 @@ class CartListScreenTabletMedium extends StatelessWidget {
                   ),
                   Expanded(
                     child: Padding(
-                      padding: const EdgeInsets.fromLTRB(10, 8, 20, 8),
-                      child: GestureDetector(
-                        child: Stack(
-                          alignment: Alignment.center,
-                          children: <Widget>[
-                            Container(
-                              height: 8.h,
-                              width: double.infinity,
-                              child: TextButton.icon(
-                                icon: Icon(
-                                  Icons.payments_rounded,
-                                  size: 5.h,
-                                ),
-                                label: Text(
-                                  "Payment",
-                                  style: TextStyle(
+                      padding: const EdgeInsets.fromLTRB(20, 8, 10, 8),
+                      child: TextButton.icon(
+                        onPressed: () {
+                          if (selectedchoices.isEmpty) {
+                            //toast message
+                            Fluttertoast.showToast(
+                                msg: "Please select an item");
+                          } else {
+                            Navigator.pushNamed(context, '/fourth');
+                          }
+                        },
+                        icon: Icon(
+                          Icons.payments_rounded,
+                          size: 5.h,
+                        ),
+                        label: Container(
+                            height: 8.h,
+                            width: 20.w,
+                            child: Center(
+                                child: Padding(
+                              padding: EdgeInsets.fromLTRB(0, 2.h, 0, 2.h),
+                              child: Text(
+                                "Payment",
+                                style: TextStyle(
                                     fontSize: responsive_Tablet_Medium_textsize,
-                                  ),
-                                ),
-                                onPressed: () {
-                                  if (selectedchoices.isEmpty) {
-                                    //toast message
-                                    Fluttertoast.showToast(
-                                        msg: "Please select an item");
-                                  } else {
-                                    Navigator.pushNamed(context, '/fourth');
-                                  }
-                                },
-                                style: TextButton.styleFrom(
-                                  backgroundColor:
-                                      Color.fromARGB(255, 11, 177, 5),
-                                  primary: Colors.white,
-                                  shape: RoundedRectangleBorder(
-                                    borderRadius: const BorderRadius.all(
-                                      Radius.circular(10),
-                                    ),
-                                  ),
-                                ),
+                                    color: Colors.white),
                               ),
+                            ))),
+                        style: TextButton.styleFrom(
+                          backgroundColor: Color.fromARGB(255, 11, 177, 5),
+                          primary: Colors.white,
+                          shape: RoundedRectangleBorder(
+                            borderRadius: const BorderRadius.all(
+                              Radius.circular(10),
                             ),
-                          ],
+                          ),
                         ),
                       ),
                     ),
