@@ -17,7 +17,7 @@ class MenuScreenMobile extends StatefulWidget {
 }
 
 class _MenuScreenMobileState extends State<MenuScreenMobile> {
-  // final dataKey = new GlobalKey();
+  var responsivetextsize = responsive_Mobile_textsize;
 
   @override
   Widget build(BuildContext context) {
@@ -71,16 +71,18 @@ class _MenuScreenMobileState extends State<MenuScreenMobile> {
               ),
             ],
           ),
-          Container(
-            alignment: Alignment.topCenter,
-            child: Text(
-              "Burgers",
-              style: TextStyle(
-                fontSize: 22,
-                fontWeight: FontWeight.w900,
+          Consumer<ShoppingCart>(builder: (context, provider, child) {
+            return Container(
+              alignment: Alignment.topCenter,
+              child: Text(
+                provider.categoryname,
+                style: TextStyle(
+                  fontSize: 28,
+                  fontWeight: FontWeight.w900,
+                ),
               ),
-            ),
-          ),
+            );
+          }),
           Expanded(
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -92,106 +94,97 @@ class _MenuScreenMobileState extends State<MenuScreenMobile> {
                     primary: false,
                     children: <Widget>[
                       CategoryItem(
-                        imageUrl: 'assets/images/quarter_pounder.png',
-                        name: 'Burgers',
-                        responsivetextsize: responsive_Mobile_textsize,
-                      ),
-                      CategoryItem(
-                        name: "Happy Meal",
-                        imageUrl: 'assets/images/happy_meal.png',
-                        responsivetextsize: responsive_Mobile_textsize,
-                      ),
-                      CategoryItem(
-                        name: "Beverages",
-                        imageUrl: 'assets/images/beverages.png',
-                        responsivetextsize: responsive_Mobile_textsize,
-                      ),
-                      CategoryItem(
-                        name: "Fries",
-                        imageUrl: 'assets/images/snacks_and_sides.png',
-                        responsivetextsize: responsive_Mobile_textsize,
-                      ),
-                      CategoryItem(
-                        imageUrl: 'assets/images/bacon_ranch_salad.png',
-                        responsivetextsize: responsive_Mobile_textsize,
-                        name: 'Snacks & Sides',
-                      ),
-                      CategoryItem(
-                        name: "Chicken",
-                        imageUrl: 'assets/images/chicken.png',
-                        responsivetextsize: responsive_Mobile_textsize,
+                        imageUrl: 'assets/images/combo_meal.png',
+                        name: 'Main Menu',
+                        categorychoice: choices,
+                        responsivetextsize: responsivetextsize,
                       ),
                       CategoryItem(
                         imageUrl: 'assets/images/quarter_pounder.png',
                         name: 'Burgers',
-                        responsivetextsize: responsive_Mobile_textsize,
-                      ),
-                      CategoryItem(
-                        name: "Happy Meal",
-                        imageUrl: 'assets/images/happy_meal.png',
-                        responsivetextsize: responsive_Mobile_textsize,
+                        categorychoice: burgerchoices,
+                        responsivetextsize: responsivetextsize,
                       ),
                       CategoryItem(
                         name: "Beverages",
+                        categorychoice: beveragechoices,
                         imageUrl: 'assets/images/beverages.png',
-                        responsivetextsize: responsive_Mobile_textsize,
-                      ),
-                      CategoryItem(
-                        name: "Fries",
-                        imageUrl: 'assets/images/snacks_and_sides.png',
-                        responsivetextsize: responsive_Mobile_textsize,
+                        responsivetextsize: responsivetextsize,
                       ),
                       CategoryItem(
                         imageUrl: 'assets/images/bacon_ranch_salad.png',
                         name: 'Snacks & Sides',
-                        responsivetextsize: responsive_Mobile_textsize,
+                        categorychoice: choices,
+                        responsivetextsize: responsivetextsize,
+                      ),
+                      CategoryItem(
+                        name: "Happy Meal",
+                        categorychoice: choices,
+                        imageUrl: 'assets/images/happy_meal.png',
+                        responsivetextsize: responsivetextsize,
+                      ),
+                      CategoryItem(
+                        name: "Fries",
+                        categorychoice: choices,
+                        imageUrl: 'assets/images/snacks_and_sides.png',
+                        responsivetextsize: responsivetextsize,
+                      ),
+                      CategoryItem(
+                        imageUrl: 'assets/images/bacon_ranch_salad.png',
+                        responsivetextsize: responsivetextsize,
+                        name: 'Snacks & Sides',
+                        categorychoice: choices,
                       ),
                       CategoryItem(
                         name: "Chicken",
+                        categorychoice: choices,
                         imageUrl: 'assets/images/chicken.png',
-                        responsivetextsize: responsive_Mobile_textsize,
+                        responsivetextsize: responsivetextsize,
                       ),
-                    ],
+                        ],
                   ),
                 ),
 
                 // grid of menu items
                 Expanded(
                   flex: 6,
-                  child: GridView.builder(
-                    itemCount: choices.length,
-                    gridDelegate:
-                        const SliverGridDelegateWithFixedCrossAxisCount(
-                            crossAxisCount: 2),
-                    itemBuilder: (BuildContext context, int index) {
-                      return GestureDetector(
-                        child: Menuitem(
-                          choice: choices[index],
-                          responsivetextsize: responsive_Mobile_textsize,
-                        ),
-                        onTap: () {
-                          context.read<ShoppingCart>().increaseOrderNumber();
-                          // int noquantity =
-                          //     int.parse(choices[index].quantity);
-                          // String squantity = '${noquantity++}';
+                  child: Consumer<ShoppingCart>(
+                      builder: (context, provider, child) {
+                    return GridView.builder(
+                      itemCount: provider.selector.length,
+                      gridDelegate:
+                          const SliverGridDelegateWithFixedCrossAxisCount(
+                              crossAxisCount: 2),
+                      itemBuilder: (BuildContext context, int index) {
+                        return GestureDetector(
+                          child: Menuitem(
+                            choice: provider.selector[index],
+                            responsivetextsize: responsivetextsize,
+                          ),
+                          onTap: () {
+                            context.read<ShoppingCart>().increaseOrderNumber();
+                            // int noquantity =
+                            //     int.parse(choices[index].quantity);
+                            // String squantity = '${noquantity++}';
 
-                          context.read<ShoppingCart>().addselecteditem(
-                                Choice(
-                                  title: choices[index].title,
-                                  imageUrl: choices[index].imageUrl,
-                                  price: choices[index].price,
-                                  quantity: choices[index].quantity,
-                                  category: choices[index].category,
-                                ),
-                              );
+                            context.read<ShoppingCart>().addselecteditem(
+                                  Choice(
+                                    title: provider.selector[index].title,
+                                    imageUrl: provider.selector[index].imageUrl,
+                                    price: provider.selector[index].price,
+                                    quantity: provider.selector[index].quantity,
+                                    category: provider.selector[index].category,
+                                  ),
+                                );
 
-                          context.read<ShoppingCart>().calculateAddTotalPrice(
-                              choices[index].quantity!,
-                              double.parse(choices[index].price));
-                        },
-                      );
-                    },
-                  ),
+                            context.read<ShoppingCart>().calculateAddTotalPrice(
+                                provider.selector[index].quantity!,
+                                double.parse(provider.selector[index].price));
+                          },
+                        );
+                      },
+                    );
+                  }),
                 ),
               ],
             ),

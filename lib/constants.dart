@@ -9,3 +9,4 @@ var responsive_Tablet_Medium_textsize = 5.sp;
 var responsive_Tablet_Large_textsize = 3.sp;
 
 var responsive_Desktop_textsize = 2.sp;
+             

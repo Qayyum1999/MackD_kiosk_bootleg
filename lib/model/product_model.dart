@@ -15,12 +15,144 @@ class Choice {
 List<Choice> selectedchoices = <Choice>[];
 List<Choice> choices = <Choice>[
   Choice(
+    title: "Samurai Meal Combo",
+    imageUrl: 'assets/images/combo_meal.png',
+    price: '5.00',
+    quantity: 1,
+    category: 'promo',
+  ),
+  Choice(
+    title: "Happy Meal Combo",
+    imageUrl: 'assets/images/combo_meal.png',
+    price: '5.00',
+    quantity: 1,
+    category: 'promo',
+  ),
+  Choice(
+    title: "Zinger Burger Combo",
+    imageUrl: 'assets/images/double_quarter_pounder.png',
+    price: '5.00',
+    quantity: 1,
+    category: 'promo',
+  ),
+  Choice(
+    title: "Coleslaw",
+    imageUrl: 'assets/images/bacon_ranch_salad.png',
+    price: '5.00',
+    quantity: 1,
+    category: 'sides',
+  ),
+  Choice(
     title: "Samurai Meal Burger",
     imageUrl: 'assets/images/combo_meal.png',
     price: '5.00',
     quantity: 1,
     category: 'burgers',
   ),
+  Choice(
+    title: "Regular McBurger",
+    imageUrl: 'assets/images/burgers_and_sandwiches.png',
+    price: '5.00',
+    quantity: 1,
+    category: 'burgers',
+  ),
+  Choice(
+    title: "Mega Beef Burger",
+    imageUrl: 'assets/images/double_quarter_pounder.png',
+    price: '5.00',
+    quantity: 1,
+    category: 'burgers',
+  ),
+  Choice(
+    title: "Pepsi",
+    imageUrl: 'assets/images/beverages.png',
+    price: '10.00',
+    category: 'beverages',
+    quantity: 1,
+  ),
+  Choice(
+    title: "Sarsi",
+    imageUrl: 'assets/images/beverages.png',
+    price: '10.00',
+    category: 'beverages',
+    quantity: 1,
+  ),
+  Choice(
+    title: "Coke",
+    imageUrl: 'assets/images/beverages.png',
+    price: '5.00',
+    quantity: 1,
+    category: 'beverages',
+  ),
+  Choice(
+    title: "Chicken Burger Happy Meal ",
+    imageUrl: 'assets/images/happy_meal.png',
+    price: '10.00',
+    quantity: 1,
+    category: 'burgers',
+  ),
+  Choice(
+    title: "Double Chicken Burger",
+    imageUrl: 'assets/images/combo_meal.png',
+    price: '5.50',
+    quantity: 1,
+    category: 'burgers',
+  ),
+  Choice(
+    title: "Burger Ramly",
+    imageUrl: 'assets/images/burgers_and_sandwiches.png',
+    price: '5.50',
+    quantity: 1,
+    category: 'burgers',
+  ),
+  Choice(
+    title: "Double Quarter Pounder",
+    imageUrl: 'assets/images/double_quarter_pounder.png',
+    price: '5.00',
+    quantity: 1,
+    category: 'burgers',
+  ),
+  Choice(
+    title: "Bacon Ranch Salad",
+    imageUrl: 'assets/images/bacon_ranch_salad.png',
+    price: '5.00',
+    quantity: 1,
+    category: 'sides',
+  ),
+  Choice(
+    title: "Sayur Salad",
+    imageUrl: 'assets/images/bacon_ranch_salad.png',
+    price: '5.00',
+    quantity: 1,
+    category: 'sides',
+  ),
+];
+
+List<Choice> beveragechoices = <Choice>[
+  Choice(
+    title: "Pepsi",
+    imageUrl: 'assets/images/beverages.png',
+    price: '10.00',
+    category: 'beverages',
+    quantity: 1,
+  ),
+  Choice(
+    title: "Sarsi",
+    imageUrl: 'assets/images/beverages.png',
+    price: '10.00',
+    category: 'beverages',
+    quantity: 1,
+  ),
+  Choice(
+    title: "Coke",
+    imageUrl: 'assets/images/beverages.png',
+    price: '5.00',
+    quantity: 1,
+    category: 'beverages',
+  ),
+];
+
+List<Choice> burgerchoices = <Choice>[
   Choice(
     title: "Regular McBurger",
     imageUrl: 'assets/images/burgers_and_sandwiches.png',
@@ -57,32 +189,18 @@ List<Choice> choices = <Choice>[
     category: 'burgers',
   ),
   Choice(
-    title: "Double Quarter Pounder",
-    imageUrl: 'assets/images/double_quarter_pounder.png',
+    title: "Samurai Meal Burger",
+    imageUrl: 'assets/images/combo_meal.png',
     price: '5.00',
     quantity: 1,
     category: 'burgers',
   ),
   Choice(
-    title: "Pepsi",
-    imageUrl: 'assets/images/beverages.png',
-    price: '10.00',
-    category: 'beverages',
-    quantity: 1,
-  ),
-  Choice(
-    title: "Sarsi",
-    imageUrl: 'assets/images/beverages.png',
-    price: '10.00',
-    category: 'beverages',
-    quantity: 1,
-  ),
-  Choice(
-    title: "Coke",
-    imageUrl: 'assets/images/beverages.png',
+    title: "Double Quarter Pounder",
+    imageUrl: 'assets/images/double_quarter_pounder.png',
     price: '5.00',
     quantity: 1,
-    category: 'beverages',
+    category: 'burgers',
   ),
   Choice(
     title: "Samurai Meal Combo",
@@ -104,27 +222,6 @@ List<Choice> choices = <Choice>[
     price: '5.00',
     quantity: 1,
     category: 'promo',
-  ),
-  Choice(
-    title: "Coleslaw",
-    imageUrl: 'assets/images/bacon_ranch_salad.png',
-    price: '5.00',
-    quantity: 1,
-    category: 'sides',
-  ),
-  Choice(
-    title: "Bacon Ranch Salad",
-    imageUrl: 'assets/images/bacon_ranch_salad.png',
-    price: '5.00',
-    quantity: 1,
-    category: 'sides',
-  ),
-  Choice(
-    title: "Sayur Salad",
-    imageUrl: 'assets/images/bacon_ranch_salad.png',
-    price: '5.00',
-    quantity: 1,
-    category: 'sides',
   ),
 ];
 
@@ -151,3 +248,5 @@ List<Choice> choices = <Choice>[
 //     price = json['price'];
 //   }
 // }
+
+

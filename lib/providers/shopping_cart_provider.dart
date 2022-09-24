@@ -14,6 +14,9 @@ class ShoppingCart with ChangeNotifier {
   String _newordermethod = '?';
   String _newpaymentmethod = '?';
 
+  List<Choice> _selector = choices;
+  String _categoryname = 'Main Menu';
+
   void ordermethodprovider(selectedordermethod) {
     _newordermethod = selectedordermethod;
     notifyListeners();
@@ -27,6 +30,15 @@ class ShoppingCart with ChangeNotifier {
   }
 
   String get newpaymentmethod => _newpaymentmethod;
+
+  void categoryselector(selector, categoryname) {
+    _selector = selector;
+    _categoryname = categoryname;
+    notifyListeners();
+  }
+
+  List<Choice> get selector => _selector;
+  String get categoryname => _categoryname;
 
   void increaseOrderNumber() {
     //bezakan order list stiap card dkt listview dengan bilangan item
@@ -42,6 +54,48 @@ class ShoppingCart with ChangeNotifier {
   }
 
   int get ordersNumber => _ordersNumber;
+
+  void addselecteditem(Choice choice) {
+    selectedchoices.add(choice);
+    notifyListeners();
+  }
+
+  void removeselecteditem(index) {
+    selectedchoices.removeAt(index);
+    notifyListeners();
+  }
+
+  void calculateAddTotalPrice(int amount, double price) {
+    _totalPriceNumber += (amount * price);
+    notifyListeners();
+  }
+
+  void calculateSubTotalPrice(int amount, double price) {
+    _totalPriceNumber -= (amount * price);
+    notifyListeners();
+  }
+
+  double get totalPriceNumber => _totalPriceNumber;
+
+  void reset() {
+    _ordersNumber = 0;
+    // _totalOrdersNumber = 0;
+
+    _totalPriceNumber = 0;
+    _amountOfFood = 1;
+
+    _newordermethod = '?';
+    _newpaymentmethod = '?';
+
+    _selector = choices;
+    _categoryname = 'Main Menu';
+
+    selectedchoices.clear();
+
+    notifyListeners();
+  }
+}
+
 
   // int get totalOrdersNumber => _totalOrdersNumber;
 
@@ -77,40 +131,3 @@ class ShoppingCart with ChangeNotifier {
   // }
 
   // int get amountOfFood => _amountOfFood;
-
-  void addselecteditem(Choice choice) {
-    selectedchoices.add(choice);
-    notifyListeners();
-  }
-
-  void removeselecteditem(index) {
-    selectedchoices.removeAt(index);
-    notifyListeners();
-  }
-
-  void calculateAddTotalPrice(int amount, double price) {
-    _totalPriceNumber += (amount * price);
-    notifyListeners();
-  }
-
-  void calculateSubTotalPrice(int amount, double price) {
-    _totalPriceNumber -= (amount * price);
-    notifyListeners();
-  }
-
-  double get totalPriceNumber => _totalPriceNumber;
-
-  void reset() {
-    _ordersNumber = 0;
-    // _totalOrdersNumber = 0;
-
-    _totalPriceNumber = 0;
-    _amountOfFood = 1;
-
-    _newordermethod = '?';
-    _newpaymentmethod = '?';
-    selectedchoices.clear();
-
-    notifyListeners();
-  }
-}
