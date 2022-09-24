@@ -1,7 +1,2 @@
-RewriteEngine On
-RewriteBase /foodkiosk/
-RewriteRule ^index\.html$ – [L]
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule . /foodkiosk/index.html [L]
-</IfModule>
+RewriteRule. /index.html [L]
+
