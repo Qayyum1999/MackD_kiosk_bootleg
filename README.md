@@ -1,4 +1,5 @@
 # Food Ordering/Foodkiosk App for Android SDK
+<a href="https://github.com/Qayyum1999"><img alt="views" title="Github views" src="https://komarev.com/ghpvc/?username=Qayyum1999&style=flat-square" width="125"/></a>
 
 A McD-like Foodkiosk front-end project made using Flutter.
 
