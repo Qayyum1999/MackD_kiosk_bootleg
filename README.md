@@ -10,7 +10,7 @@ A McD-like Foodkiosk front-end project made using Flutter.
 4. google_fonts  
 
 ## How to run
-checkout the demo live hosted: https://qayyum1999.github.io/foodkiosk/
+checkout the demo live hosted: https://qayyum1999.github.io/MackD_kiosk_bootleg/
 
 To download the .apk file, click the gdrive link here:
  https://drive.google.com/drive/folders/1L5g9hRYoXyv_6lqdkprDG0AAtd9V_zSM?usp=sharing
